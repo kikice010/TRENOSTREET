@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -173,14 +173,4 @@
 	</body>
 </html>
 
-=======
-<!--[if lt IE 7]> <html lang="en" class="no-js oldie ie6"> <![endif]-->
-<!--[if IE 7 ]> <html lang="en" class="no-js oldie ie7"> <![endif]-->
-<!--[if IE 8 ]> <html lang="en" class="no-js oldie ie8"> <![endif]-->
-<!--[if (gt IE 8)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-<head></head>
-<body>
-HELLO! TRENOSTREET
-</body>
-</html>
->>>>>>> b9526c23e95e97c645a8cb1a0779cf0f270039ac
+
