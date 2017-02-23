@@ -7,9 +7,9 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Launch &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>TrenoStreet</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="description" content="TrenoStreet" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
@@ -66,13 +66,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<div id="fh5co-logo"><a href="index.html">Launch<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="index.php"><img class="" src="images/logo_w.png" height="50"/></a></div>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);background-size:cover; background-repeat:no-repeat;" >
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -80,7 +80,6 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>We Are Coming Very Soon!</h1>
-							<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<div class="row">
 								<h2>Notify me when it's ready</h2>
@@ -92,12 +91,12 @@
 										</div>
 									</div>
 								</form>
-								<ul class="fh5co-social-icons">
+							<!-- 	<ul class="fh5co-social-icons">
 									<li><a href="#"><i class="icon-twitter-with-circle"></i></a></li>
 									<li><a href="#"><i class="icon-facebook-with-circle"></i></a></li>
 									<li><a href="#"><i class="icon-linkedin-with-circle"></i></a></li>
 									<li><a href="#"><i class="icon-dribbble-with-circle"></i></a></li>
-								</ul>
+								</ul> -->
 							</div>
 						</div>
 					</div>
@@ -112,8 +111,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+						<small class="block">&copy; 2017 TRENOSTREET</small> 
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
@@ -152,7 +150,8 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 800 * 120 * 120 * 2000);
+	var deadline = 2592000000;
+    var d = new Date(new Date().getTime()+deadline);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
