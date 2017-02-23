@@ -86,7 +86,7 @@
 								<form class="form-inline" id="fh5co-header-subscribe">
 									<div class="col-md-12 col-md-offset-0">
 										<div class="form-group">
-											<input type="text" class="form-control" id="email" placeholder="Mandame una email">
+											<input type="email" class="form-control" id="email" placeholder="Mandame una email">
 											<button type="submit" class="btn btn-primary">Guarda</button>
 										</div>
 									</div>
