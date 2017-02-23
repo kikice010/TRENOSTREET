@@ -13,12 +13,12 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-  <!-- 
+  <!--
 	//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE 
+	FREE HTML5 TEMPLATE
 	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
+
 	Website: 		http://freehtml5.co/
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
@@ -39,7 +39,7 @@
 	<meta name="twitter:card" content="" />
 
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -58,9 +58,9 @@
 
 	</head>
 	<body>
-		
+
 	<div class="fh5co-loader"></div>
-	
+
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -79,15 +79,15 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>We Are Coming Very Soon!</h1>
+							<h1>Ya casi estamos listos!</h1>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<div class="row">
-								<h2>Notify me when it's ready</h2>
+								<h2>Informame quando todo este listo!</h2>
 								<form class="form-inline" id="fh5co-header-subscribe">
 									<div class="col-md-12 col-md-offset-0">
 										<div class="form-group">
 											<input type="text" class="form-control" id="email" placeholder="Get notify by email">
-											<button type="submit" class="btn btn-primary">Send</button>
+											<button type="submit" class="btn btn-primary">Guarda</button>
 										</div>
 									</div>
 								</form>
@@ -111,7 +111,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2017 TRENOSTREET</small> 
+						<small class="block">&copy; 2017 TRENOSTREET</small>
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">
@@ -131,7 +131,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -171,5 +171,3 @@
 
 	</body>
 </html>
-
-
