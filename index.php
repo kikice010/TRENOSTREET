@@ -13,19 +13,6 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-  <!--
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -150,20 +137,19 @@
 	<script src="js/main.js"></script>
 
 	<script>
-	var deadline = 2592000000;
-    var d = new Date(new Date().getTime()+deadline);
+    var d = new Date(2017,4,10,0,0,0);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
-        month: d.getMonth() + 1,
+        month: d.getMonth(),
         day: d.getDate()
     });
 
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
         year: d.getFullYear(),
-        month: d.getMonth() + 1,
+        month: d.getMonth(),
         day: d.getDate(),
         enableUtc: false
     });
