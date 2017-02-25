@@ -73,8 +73,8 @@
 								<form class="form-inline" id="fh5co-header-subscribe">
 									<div class="col-md-12 col-md-offset-0">
 										<div class="form-group">
-											<input type="text" class="form-control" id="email" placeholder="Get notify by email">
-											<button type="submit" class="btn btn-primary">Guarda</button>
+											<input type="email" class="form-control" id="email" placeholder="Notificame por correo electrónico">
+											<button type="submit" class="btn btn-primary">Enviar</button>
 										</div>
 									</div>
 								</form>
