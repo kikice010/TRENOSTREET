@@ -4,6 +4,10 @@
 	Twitter: http://twitter.com/gettemplateco
 	URL: http://gettemplates.co
 -->
+<?php
+
+require "/php/helper.php";
+ ?>
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -26,7 +30,7 @@
 	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -49,36 +53,11 @@
 
 	</head>
 	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2 text-left">
-					<div id="fh5co-logo"><a href="index.php"><img class="" src="images/logo_w.png" height="50"/></a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li class="has-dropdown">
-							<a href="courses.html">Courses</a>
-							<ul class="dropdown">
-								<li><a href="#">By district</a></li>
-								<li><a href="#">By category</a></li>
-							</ul>
-						</li>
 
-						<li><a href="products.html">Profile</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><button type="button" data-toggle="modal" data-target="#loginModal"  class="btn btn-primary">Login</button></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+<?php 	echo NavigationGet(); ?>
 
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -89,7 +68,7 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
 							<h1 class="mb30">Let us build brands together shall we?</h1>
 							<p>
-								<a href="http://gettemplates.co/" target="_blank" class="btn btn-primary">Get Started</a>  <em class="or">or</em> 
+								<a href="http://gettemplates.co/" target="_blank" class="btn btn-primary">Get Started</a>  <em class="or">or</em>
 								<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Watch Video</a>
 							</p>
 						</div>
@@ -137,7 +116,7 @@
 
 			</div>
 		</div>
-		
+
 	</div>
 
 
@@ -270,7 +249,7 @@
 
 				</div>
 
-				
+
 
 			</div>
 		</div>
@@ -289,7 +268,7 @@
 			</div>
 
 			<div class="row">
-				
+
 				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
 					<div class="feature-center">
 						<span class="icon">
@@ -328,7 +307,7 @@
 
 						</div>
 					</div>
-						
+
 				</div>
 			</div>
 	</div>
@@ -426,7 +405,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
 					</p>
 					<p>
@@ -447,7 +426,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 
 
 <div class="modal fade optionModal" id="loginModal" role="dialog">
@@ -527,4 +506,3 @@
 
 	</body>
 </html>
-

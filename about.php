@@ -4,6 +4,11 @@
 	Twitter: http://twitter.com/gettemplateco
 	URL: http://gettemplates.co
 -->
+<?php
+
+require "/php/helper.php";
+ ?>
+
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -26,7 +31,7 @@
 	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -49,39 +54,11 @@
 
 	</head>
 	<body>
-		
-	<div class="fh5co-loader"></div>
-	
-	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2 text-left">
-					<div id="fh5co-logo"><a href="index.html">Concept<span>.</span></a></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
 
-						<li><a href="products.html">Products</a></li>
-						<li class="active"><a href="about.html">About</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
+	<div class="fh5co-loader"></div>
+
+	<div id="page">
+	<?php 	echo NavigationGet(); ?>
 
 	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -98,7 +75,7 @@
 		</div>
 	</header>
 
-	
+
 
 	<div id="fh5co-team">
 		<div class="container">
@@ -199,7 +176,7 @@
 
 				</div>
 
-				
+
 
 			</div>
 		</div>
@@ -207,7 +184,7 @@
 
 
 
-	
+
 	<div id="fh5co-started">
 		<div class="container">
 			<div class="row animate-box">
@@ -263,7 +240,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
 					</p>
 					<p>
@@ -284,7 +261,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -305,4 +282,3 @@
 
 	</body>
 </html>
-
