@@ -1,6 +1,5 @@
 <?php
-$index_page = "main.php";
-
+include_once("constants.php");
 
 function NavigationGet(){
 

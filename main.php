@@ -12,11 +12,11 @@ require "/php/helper.php";
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Concept &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+	<title><?php echo TextConstants::TRENOSTREET; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="gettemplates.co" />
+	<meta name="description" content="<?php echo TextConstants::DESCRIPTION; ?>" />
+	<meta name="keywords" content="<?php echo TextConstants::KEYWORDS; ?>" />
+	<meta name="author" content="<?php echo TextConstants::AUTHOR; ?>" />
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -66,10 +66,10 @@ require "/php/helper.php";
 				<div class="col-md-7 text-left">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
-							<h1 class="mb30">Let us build brands together shall we?</h1>
+							<h1 class="mb30">¿Listo para rendir al máximo?</h1>
 							<p>
-								<a href="http://gettemplates.co/" target="_blank" class="btn btn-primary">Get Started</a>  <em class="or">or</em>
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Watch Video</a>
+								<a href="#fh5co-project"  class="btn btn-primary">Comineza</a>
+							<!--	 <em class="or">or</em> <a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Vea el Video</a>-->
 							</p>
 						</div>
 					</div>
