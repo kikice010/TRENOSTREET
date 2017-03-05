@@ -668,6 +668,14 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
+
+#fh5co-footer{
+	background-color: $brand-secondary;
+	color: white;
+}
+
+
+
 #fh5co-testimonial {
 	background: #F0F5F9;
 	.testimonial {
@@ -1309,7 +1317,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin: 0;
 			list-style: none;
 			a {
-				color: $brand-black;
+				color: $brand-white;
 				text-decoration: none;
 				&:hover {
 					text-decoration: underline;

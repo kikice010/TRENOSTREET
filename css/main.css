@@ -507,6 +507,10 @@ h1, h2, h3, h4, h5, h6, figure {
     #fh5co-footer {
       padding: 3em 0; } }
 
+#fh5co-footer {
+  background-color: #3e8e3e;
+  color: white; }
+
 #fh5co-testimonial {
   background: #F0F5F9; }
   #fh5co-testimonial .testimonial {
@@ -1001,7 +1005,7 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0;
     list-style: none; }
     #fh5co-footer .fh5co-footer-links li a {
-      color: #000;
+      color: #fff;
       text-decoration: none; }
       #fh5co-footer .fh5co-footer-links li a:hover {
         text-decoration: underline; }

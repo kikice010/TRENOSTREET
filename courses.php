@@ -12,11 +12,11 @@ require "/php/helper.php";
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Concept &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+	<title><?php echo TextConstants::TRENOSTREET; ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="gettemplates.co" />
+	<meta name="description" content="<?php echo TextConstants::DESCRIPTION; ?>" />
+	<meta name="keywords" content="<?php echo TextConstants::KEYWORDS; ?>" />
+	<meta name="author" content="<?php echo TextConstants::AUTHOR; ?>" />
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -42,7 +42,7 @@ require "/php/helper.php";
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -57,16 +57,16 @@ require "/php/helper.php";
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	<?php 	echo NavigationGet(); ?>
+<?php 	CommonStructure::NavigationGet(); ?>
 
-	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+		<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 text-left">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
-							<h1 class="mb30">Our Creative Products</h1>
+							<h1 class="mb30">Our catalogue of courses</h1>
 						</div>
 					</div>
 				</div>
@@ -76,117 +76,69 @@ require "/php/helper.php";
 
 
 
+
 	<div id="fh5co-project">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
-					<span>Want Some Cool Stuff</span>
-					<h2>Recent Products</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<span>We offer variaty of outdoor courses</span>
+					<h2>List of courses</h2>
+					<p>Through our platform you will be able to search for the course that matches your lifestyle and skill level</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-1.jpg" alt="Spinning" class="img-responsive" height="454">
 						<div class="fh5co-copy">
-							<h3>Clipboard Office</h3>
-							<p>Web Design</p>
+							<h3>Spinning</h3>
+							<p>Cardio</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-2.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
-							<h3>Smart Layers</h3>
-							<p>Brand &amp; Identity</p>
+							<h3>Running Club</h3>
+							<p>Cardio</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-3.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
-							<h3>Notepad Mockup</h3>
-							<p>Illustration</p>
+							<h3>Samba</h3>
+							<p>Dance</p>
 						</div>
 					</a>
 				</div>
 
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-4.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-4.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
-							<h3>Outline Ribbon</h3>
-							<p>Web Design</p>
+							<h3>Zumba</h3>
+							<p>Dance</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-5.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-5.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
-							<h3>Food Icons Set</h3>
-							<p>Brand &amp; Identity</p>
+							<h3>Scott Pilates</h3>
+							<p>Pilates</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-6.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="course.php"><img src="images/work-6.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
-							<h3>Business Card</h3>
-							<p>Illustration</p>
+							<h3>Bikram Yoga</h3>
+							<p>Yoga</p>
 						</div>
 					</a>
 				</div>
 
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Clipboard Office</h3>
-							<p>Web Design</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Smart Layers</h3>
-							<p>Brand &amp; Identity</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Notepad Mockup</h3>
-							<p>Illustration</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-4.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Outline Ribbon</h3>
-							<p>Web Design</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-5.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Food Icons Set</h3>
-							<p>Brand &amp; Identity</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="images/work-6.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
-						<div class="fh5co-copy">
-							<h3>Business Card</h3>
-							<p>Illustration</p>
-						</div>
-					</a>
-				</div>
-
+				
 
 				<div class="col-md-12 text-center">
 					<nav aria-label="Page navigation">
@@ -216,25 +168,11 @@ require "/php/helper.php";
 	</div>
 
 
-
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<span>Let's work together</span>
-					<h2>Try this template for free</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-					<p><button type="submit" class="btn btn-default">Get In Touch</button></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget ">
-					<h3>Concept.</h3>
+					<h3><div id="fh5co-logo"><a href="main"><img class="" src="images/logo_w.png" height="50"/></a></div></h3>
 					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
 					<p><a href="#">Learn More</a></p>
 				</div>

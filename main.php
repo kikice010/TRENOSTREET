@@ -367,7 +367,7 @@ require "/php/helper.php";
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget ">
-					<h3>Concept.</h3>
+					<h3><div id="fh5co-logo"><a href="main"><img class="" src="images/logo_w.png" height="30"/></a></div></h3>
 					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
 					<p><a href="#">Learn More</a></p>
 				</div>
