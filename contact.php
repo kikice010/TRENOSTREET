@@ -57,7 +57,7 @@ require "/php/helper.php";
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-	<?php 	echo NavigationGet(); ?>
+<?php 	CommonStructure::NavigationGet(); ?>
 
 	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>

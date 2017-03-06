@@ -7,6 +7,7 @@
 <?php
 
 require "/php/helper.php";
+
  ?>
 <html>
 	<head>
@@ -138,7 +139,7 @@ require "/php/helper.php";
 					</a>
 				</div>
 
-				
+
 
 				<div class="col-md-12 text-center">
 					<nav aria-label="Page navigation">
