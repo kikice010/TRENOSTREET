@@ -5,7 +5,7 @@
         URL: http://gettemplates.co
 -->
 <?php
-require "/php/helper/helper.php";
+require("/php/helper/helper.php");
 ?>
 <html>
     <head>
