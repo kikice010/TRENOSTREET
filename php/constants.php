@@ -21,8 +21,16 @@ class SocialConstants {
 class CourseRequestType {
 
     const SINGLE_COURSE_GET = 0;
-    const MULTIPLE_COURSE_GET = 1;
+    const MULTIPLE_COURSES_GET = 1;
 
+}
+
+class AccountActionType {
+
+    const LOGOUT = 0;
+    const LOGIN = 1;
+    CONST SIGNUP_FIRST = 2;
+    const SIGNUP_SECOND = 3;
 
 }
 
