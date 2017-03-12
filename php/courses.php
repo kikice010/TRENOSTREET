@@ -1,62 +1,45 @@
 <?php
+
 require "/php/conx.php";
-
-class Courses{
-
 $connection = new DB();
 
+class Courses {
 
-private static function getCourseListStructure($id){
+    private static function createNewCourse() {
+        
+    }
 
-$id_course = $id;
+    private static function removeCourse() {
+        
+    }
 
-echo '<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-    <a href="course.php?id='. $id_course .'"><img src="images/work-1.jpg" alt="Spinning" class="img-responsive" height="454">
-      <div class="fh5co-copy">
-        <h3>Spinning</h3>
-        <p>Cardio</p>
-      </div>
-    </a>
-  </div>';
+    private static function disableCourse($id_course) {
+        
+    }
 
-
-}
-
-
-private static function getUserCourses($userId){
+    private static function userCoursesGet($user_id) {
 
 
+        $stmt = $connection->prepare("SELECT * FROM `courses` WHERE id=:id");
+        $stmt->bindParam(':id', $user_id, PDO::PARAM_INT);
+        $stm->execute();
+    }
 
+    private static function allCoursesListGet($filter, $orderBy, $orderDir) {
 
+        $stmt = $connection->prepare("SELECT * FROM `courses` WHERE id=:id");
+        $stmt->bindParam(':id', $id_course, PDO::PARAM_INT);
+        $stm->execute();
+    }
 
-}
+    private static function singleCourseGet($id) {
 
-
-private static function getCoursesList($filter, $orderBy, $orderDir){
-
-
-
-
-
-}
-
-
-
-private static function getCourse($id){
-
-
-
-
-
+        $id_course = $id;
+        $stmt = $connection->prepare("SELECT * FROM `courses` WHERE id=:id");
+        $stmt->bindParam(':id', $id_course, PDO::PARAM_INT);
+        $stm->execute();
+    }
 
 }
-
-
-
-
-}
-
-
-
 
 ?>
