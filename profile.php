@@ -157,7 +157,7 @@ require "./php/helper/helper.php";
                         <br>
                         <div class="row form">
                             <div class="col-md-2 pull-right">
-                                <input type="button" class="btn btn-primary" value="Add new course">     
+                                <input type="button" class="btn btn-primary" value="Add new course" onclick="location.href='./add_course.php';">     
                             </div>           
                         </div>
                         <br>
