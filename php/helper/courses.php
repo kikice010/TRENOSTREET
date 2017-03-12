@@ -1,6 +1,6 @@
 <?php
 
-require "/php/conx.php";
+require "../conx/conx.php";
 $connection = new DB();
 
 class Courses {

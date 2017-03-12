@@ -1,5 +1,5 @@
 <?php
-include_once("constants.php");
+include_once("../constants.php");
 
 class CommonStructure{
 	public static	function NavigationGet(){
