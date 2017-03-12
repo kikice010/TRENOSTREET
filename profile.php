@@ -43,7 +43,7 @@ require "./php/helper/helper.php";
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/main.css">
 
-        <!-- Theme style  -->
+    <!-- Theme style  -->
     <link rel="stylesheet" href="css/index.css">
 
     <!-- Modernizr JS -->
@@ -82,6 +82,7 @@ require "./php/helper/helper.php";
                     <ul class="nav nav-tabs">
                       <li role="presentation" class="active"><a href="#profile" role="tab" data-toggle="tab">Personal Information</a></li>
                       <li role="presentation"><a href="#courses" role="tab" data-toggle="tab">My courses</a></li>
+                      <li role="presentation"><a href="#subscriptions" role="tab" data-toggle="tab">My subscriptions</a></li>
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">
@@ -176,6 +177,17 @@ require "./php/helper/helper.php";
                     </div>
                 </div>
                 <div class="row">
+                    <label class="col-lg-3 control-label">Category:</label>
+                    <div class="col-lg-8">
+                        <label id="course_name" class="control-label itemLabel">Yoga</label>
+                        <select class="form-control itemInput" id="sel1">
+                            <option>Yoga</option>
+                            <option>Spinning</option>
+                            <option>Lifting</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
                     <label class="col-lg-3 control-label">Address:</label>
                     <div class="col-lg-8">
                      <label id="course_address" class="control-label itemLabel">Via San Vittore 34</label>
@@ -235,8 +247,40 @@ require "./php/helper/helper.php";
 
 
 </div>
-</div>
 
+                    <div role="tabpanel" class="tab-pane active" id="subscriptions">
+                        <br>
+                        <div class="row">
+                        <div class="col-xs-12">
+                             <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Subscription</th>
+            <th>Start date</th>
+            <th>End date</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bikrams Yoga</td>
+        <td>Monthly</td>
+        <td>12/3/2017</td>
+        <td>12/4/2017</td>
+    </tr>
+    <tr>
+        <td>Crossfit</td>
+        <td>Yearly</td>
+        <td>12/3/2017</td>
+        <td>12/3/2018</td>
+    </tr>
+</tbody>
+</table> 
+                </div>
+        </div>
+
+</div>
+</div>
 </div>
 
 </div>
