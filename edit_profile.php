@@ -72,6 +72,7 @@ require "/php/helper.php";
       </div>
     </div>
   </header>
+  <div id="fh5co-project">
 <div class="container">
     <h1>Edit Profile</h1>
   	<hr>
@@ -88,7 +89,7 @@ require "/php/helper.php";
       
       <!-- edit form column -->
       <div class="col-md-9 personal-info">
-        <div class="alert alert-info alert-dismissable">
+        <div class="alert alert-success alert-dismissable">
           <a class="panel-close close" data-dismiss="alert">×</a> 
           <i class="fa fa-coffee"></i>
           This is an <strong>.alert</strong>. Use this to show important messages to the user.
@@ -178,7 +179,7 @@ require "/php/helper.php";
   </div>
 </div>
 <hr>
-
+</div>
   <footer id="fh5co-footer" role="contentinfo">
     <div class="container">
       <div class="row row-pb-md">
