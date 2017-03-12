@@ -1,6 +1,7 @@
 <?php
 
 include_once '/../constants.php';
+session_start();
 
 class CommonStructure {
 
