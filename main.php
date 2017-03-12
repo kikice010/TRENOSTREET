@@ -59,7 +59,7 @@ require "/php/helper.php";
 	<div id="page">
 <?php 	CommonStructure::NavigationGet(); ?>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -436,7 +436,7 @@ require "/php/helper.php";
         <div id="modalFooterContainer" style="width:100%;display:inline-block">
           <span class="col-xs-6" style="text-align:left;padding:0">Not a member yet?</span>
           <span class="col-xs-6 btnGroup">
-            <button type="button" id="signUpLogInModalButton" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-dismiss="modal">Sign up</button>
+            <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href='./edit_profile.php';" data-toggle="modal" data-dismiss="modal">Register</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </span>
         </div>
@@ -445,33 +445,7 @@ require "/php/helper.php";
   </div>
 </div>
 
-<!-- Modal SignUp-->
-<div class="modal fade optionModal" id="signUpModal" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Sign up</h4>
-      </div>
-      <div class="modal-body">
-            <label class="col-xs-12 label label-warning labelError" id="signUpError"></label>
-            <input class="col-xs-12 form-control" id="emailSignUpField" type="text" name="emailSignUpField" placeholder="Email address" required>
-            <input class="col-xs-12 form-control" id="passwordSignUpField" type="password" name="passwordSignUpField" placeholder="Password" required>
-            <button id="signUpEmailSignUpModalBtn" class="	btn btn-primary" onclick="signUp()">Sign up</button>
-      </div>
-      <div class="modal-footer">
-        <div id="modalFooterContainer" style="width:100%;display:inline-block">
-          <span class="col-xs-6" style="text-align:left;padding:0">Already a member?</span>
-          <span class="col-xs-6 btnGroup">
-            <button type="button" id="logInSignUpModalBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Log in</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
