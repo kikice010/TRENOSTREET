@@ -1,5 +1,6 @@
 <?php
 
+
 include_once '/../constants.php';
 session_start();
 
@@ -23,7 +24,7 @@ class CommonStructure {
 									<li><a href="#">Por categoria</a></li>
 								</ul>
 							</li>
-							<li><a href="products">Perfil</a></li>
+							<li><a href="profile.php">Perfil</a></li>
 							<li><a href="contact">Contactos</a></li>
 							<li><button type="button" data-toggle="modal" data-target="#loginModal"  class="btn btn-primary">Acceder</button></li>
 						</ul>
