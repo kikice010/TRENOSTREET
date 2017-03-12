@@ -3,7 +3,6 @@
 include_once("../constants.php");
 include_once '../helper/account.php';
 
-
 switch ($_GET['action']) {
 
     case AccountActionType::LOGIN:
@@ -25,3 +24,4 @@ switch ($_GET['action']) {
 
         echo "Unknown value for 'action'";
 }
+?>

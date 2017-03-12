@@ -23,3 +23,4 @@ switch ($_GET['action']) {
 
         echo "Unknown value for 'action'";
 }
+?>
