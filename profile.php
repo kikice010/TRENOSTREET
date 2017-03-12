@@ -167,7 +167,7 @@ require "./php/helper/helper.php";
             <br>
 
             <!-- edit form column -->
-            <div class="col-md-8 personal-info" id="courseIdItem">
+            <div class="col-md-8 personal-info courseIdItem">
                 <div class="row">
                     <label class="col-lg-3 control-label">Course:</label>
                     <div class="col-lg-8">
@@ -202,7 +202,7 @@ require "./php/helper/helper.php";
          </div>
      </div>
  </div>
- <div class="col-md-4">
+ <div class="col-md-4 courseIdItem">
      <table class="table table-condensed">
         <thead>
           <tr>
@@ -213,19 +213,19 @@ require "./php/helper/helper.php";
     <tbody>
       <tr>
         <td>Yearly</td>
-        <td>1000</td>
+        <td><span class="itemLabel">1000</span><input class=" itemInput" type="text" value="1000"></td>
     </tr>
     <tr>
         <td>Monthly</td>
-        <td>100</td>
+        <td><span class="itemLabel">100</span><input class="itemInput" type="text" value="100"></td>
     </tr>
     <tr>
         <td>Weekly</td>
-        <td>15</td>
+        <td><span class="itemLabel">15</span><input class="itemInput" type="text" value="15"></td>
     </tr>
     <tr>
         <td>Hourly</td>
-        <td>5</td>
+        <td><span class="itemLabel">5</span><input class="itemInput" type="text" value="5"></td>
     </tr>
 </tbody>
 </table>
