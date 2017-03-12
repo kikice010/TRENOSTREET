@@ -2,7 +2,6 @@
 include_once("constants.php");
 
 class CommonStructure{
-
 	public static	function NavigationGet(){
 
 	echo '<nav class="fh5co-nav" role="navigation">

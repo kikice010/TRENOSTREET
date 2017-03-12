@@ -56,8 +56,7 @@ require "/php/helper.php";
 	<body>
 
 	<div class="fh5co-loader"></div>
-
-	<div id="page">
+ <div id="page">
 <?php 	CommonStructure::NavigationGet(); ?>
 
 		<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
@@ -74,10 +73,6 @@ require "/php/helper.php";
 			</div>
 		</div>
 	</header>
-
-
-
-
 	<div id="fh5co-project">
 		<div class="container">
 			<div class="row row-pb-md">
