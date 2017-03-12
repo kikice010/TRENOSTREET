@@ -7,6 +7,9 @@ switch ($_GET['action']) {
 
     case CourseRequestType::SINGLE_COURSE_GET:
       
+        
+        
+        
         break;
 
     default: 

@@ -22,9 +22,7 @@ class CourseRequestType {
 
     const SINGLE_COURSE_GET = 0;
     const MULTIPLE_COURSE_GET = 1;
-    const SINGLE_COURSE_GET = 0;
-    const SINGLE_COURSE_GET = 0;
-    const SINGLE_COURSE_GET = 0;
+
 
 }
 
