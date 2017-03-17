@@ -57,7 +57,7 @@ require "./php/helper/helper.php";
         <div class="fh5co-loader"></div>
         <div id="page">
 <?php CommonStructure::NavigationGet(); ?>
-            <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" >
+            <header id="fh5co-header" class="fh5co-cover fh5co-small-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" >
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row">
@@ -94,23 +94,23 @@ require "./php/helper/helper.php";
                         </div>
                         <h3>Personal info</h3>
 
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" method="post" action="./php/controller/accountCon.php" role="form">
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">First name:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="Milica">
+                                    <input class="form-control" name="firstname" type="text" value="Milica">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Last name:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="Jovanovic">
+                                    <input class="form-control" name="lastname" type="text" value="Jovanovic">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">User type:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control" id="userType">
+                                    <select class="form-control"  name="userType" id="userType">
                                         <option>Trainer</option>
                                         <option>Trainee</option>
                                     </select>
@@ -119,25 +119,25 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Description:</label>
                                 <div class="col-lg-8">
-                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    <textarea class="form-control" name="description" rows="5" id="description"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Email:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="kikice010@gmail.com">
+                                    <input class="form-control" type="text" name="email" value="kikice010@gmail.com">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Age:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="number" value="25">
+                                    <input class="form-control" name="age" type="number" value="25">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">City:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" name="city" id="sel1">
                                         <option>Lima</option>
                                         <option>Cusco</option>
                                         <option>Arequipa</option>
@@ -148,13 +148,13 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Username:</label>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" value="milica">
+                                    <input class="form-control" name="username" type="text" value="milica">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Password:</label>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="password" value="11111122333">
+                                    <input class="form-control" name="password" type="password" value="11111122333">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -166,7 +166,7 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-md-3 control-label"></label>
                                 <div class="col-md-8">
-                                    <input type="button" class="btn btn-primary" value="Register">
+                                    <input type="submit" class="btn btn-primary" value="Register">
                                     <input type="button" class="btn btn-primary" value="Save Changes">
                                     <span></span>
                                     <input type="reset" class="btn btn-default" value="Cancel">
@@ -177,66 +177,8 @@ require "./php/helper/helper.php";
                 </div>
             </div>
             <hr>
+        <?php CommonStructure::FooterGet(); ?>
 
-            <footer id="fh5co-footer" role="contentinfo">
-                <div class="container">
-                    <div class="row row-pb-md">
-                        <div class="col-md-4 fh5co-widget ">
-                            <h3><div id="fh5co-logo"><a href="main"><img class="" src="images/logo_w.png" height="50"/></a></div></h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-                            <p><a href="#">Learn More</a></p>
-                        </div>
-                        <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-                            <ul class="fh5co-footer-links">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Help</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Meetups</a></li>
-                            </ul>
-                        </div>
-
-
-                        <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-                            <ul class="fh5co-footer-links">
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Handbook</a></li>
-                                <li><a href="#">Held Desk</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-                            <ul class="fh5co-footer-links">
-                                <li><a href="#">Find Designers</a></li>
-                                <li><a href="#">Find Developers</a></li>
-                                <li><a href="#">Teams</a></li>
-                                <li><a href="#">Advertise</a></li>
-                                <li><a href="#">API</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row copyright">
-                        <div class="col-md-12 text-center">
-                            <p>
-                                <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-                                <small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
-                            </p>
-                            <p>
-                            <ul class="fh5co-social-icons">
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </footer>
         </div>
 
         <div class="gototop js-top">
