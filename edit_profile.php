@@ -98,6 +98,7 @@ require "./php/helper/helper.php";
                         <h3>Personal info</h3>
 
                         <form class="form-horizontal" method="post" action="./php/controller/accountCon.php" role="form">
+                            <input class="form-control" name="action" type="hidden" value="2">
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">First name:</label>
                                 <div class="col-lg-8">
