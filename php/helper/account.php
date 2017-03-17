@@ -1,28 +1,29 @@
 <?php
 
-require "../conx/conx.php";
-$connection = new DB();
-
 class USER {
 
     private $db;
 
     function __construct() {
-        $this->db = $connection;
+        $this->conn = new DB();
     }
 
-    public function register($fname, $lname, $uname, $umail, $upass) {
+    public function register($firstname, $lastname, $userType, $description, $email, $age, $city,  $username, $password, $address, $phone_num) {
         try {
-            $new_password = password_hash($upass, PASSWORD_DEFAULT);
-
-            $stmt = $this->db->prepare("INSERT INTO users(user_name,user_email,user_pass) 
-                                                       VALUES(:uname, :umail, :upass)");
-
-            $stmt->bindparam(":uname", $uname);
-            $stmt->bindparam(":umail", $umail);
-            $stmt->bindparam(":upass", $new_password);
+            $new_password = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $this->conn->db->prepare("INSERT INTO user(name,surname,type,description,email,age,id_city,username,password,address,phone_num) VALUES (:name,:surname,:type,:description,:email,:age,:id_city,:username,:password,:address,:phone_num)");
+            $stmt->bindparam(":name", $firstname);
+            $stmt->bindparam(":surname", $lastname);
+            $stmt->bindparam(":type", $userType);
+            $stmt->bindparam(":description", $description);
+            $stmt->bindparam(":email", $email);
+            $stmt->bindparam(":age", $age);
+            $stmt->bindparam(":id_city", $city);
+            $stmt->bindparam(":username", $username);
+            $stmt->bindparam(":password", $new_password);
+            $stmt->bindparam(":address", $address);
+            $stmt->bindparam(":phone_num", $phone_num);
             $stmt->execute();
-
             return $stmt;
         } catch (PDOException $e) {
             echo $e->getMessage();

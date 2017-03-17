@@ -115,8 +115,8 @@ require "./php/helper/helper.php";
                                 <label class="col-lg-3 control-label">User type:</label>
                                 <div class="col-lg-8">
                                     <select class="form-control"  name="userType" id="userType">
-                                        <option>Trainer</option>
-                                        <option>Trainee</option>
+                                        <option value="0">Trainer</option>
+                                        <option value="1">Trainee</option>
                                     </select>
                                 </div>
                             </div>
@@ -154,10 +154,10 @@ require "./php/helper/helper.php";
                                 <label class="col-lg-3 control-label">City:</label>
                                 <div class="col-lg-8">
                                     <select class="form-control" name="city" id="sel1">
-                                        <option>Lima</option>
-                                        <option>Cusco</option>
+                                        <option  value="1">Lima</option>
+<!--                                        <option>Cusco</option>
                                         <option>Arequipa</option>
-                                        <option>Trujillo</option>
+                                        <option>Trujillo</option>-->
                                     </select>
                                 </div>
                             </div>

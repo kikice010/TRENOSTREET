@@ -1,29 +1,40 @@
 <?php
 
 include_once("../constants.php");
-include_once '../helper/account.php';
+include_once '../af/accountAF.php';
 
-$userClass = new USER();
+$userClass = new AccountAF();
 
-switch ($_GET['action']) {
-
-
+switch ($_POST['action']) {
     case AccountActionType::LOGIN:
 
-        $userClass->login($uname, $umail, $upass);
+//        $userClass->login($uname, $umail, $upass);
         break;
     case AccountActionType::LOGOUT:
 
-        $userClass->logout();
+//        $userClass->logout();
         break;
 
     case AccountActionType::SIGNUP_FIRST:
 
+//filter_input(INPUT_POST, 'variable', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $userType = $_POST['userType'];
+        $description = $_POST['description'];
+        $email = $_POST['email'];
+        $age = $_POST['age'];
+        $city = $_POST['city'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $address = $_POST['address'];
+        $phone_num = $_POST['phone_num'];
+
+        echo $userClass->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num);
+
         break;
 
-    case AccountActionType::SIGNUP_SECOND:
-        $userClass->register($fname, $lname, $uname, $umail, $upass);
-        break;
     default:
 
         echo "Unknown value for 'action'";
