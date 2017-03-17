@@ -1,3 +1,7 @@
 .itemInput {
     margin-bottom: 5px;
 }
+
+ .hidden-section{
+ 	display: none;
+ }

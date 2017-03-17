@@ -43,6 +43,8 @@ require "./php/helper/helper.php";
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/main.css">
 
+        <link rel="stylesheet" href="css/index.css">
+
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <!-- FOR IE9 below -->
@@ -71,12 +73,13 @@ require "./php/helper/helper.php";
                     </div>
                 </div>
             </header>
+             <div id="fh5co-project">
             <div class="container">
                 <h1>Edit Profile</h1>
                 <hr>
                 <div class="row">
                     <!-- left column -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 hidden-section">
                         <div class="text-center">
                             <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
                             <h6>Upload a different photo...</h6>
@@ -134,6 +137,18 @@ require "./php/helper/helper.php";
                                     <input class="form-control" name="age" type="number" value="25">
                                 </div>
                             </div>
+                             <div class="form-group">
+                                <label class="col-lg-3 control-label">Phone number:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" name="phone_num" type="tel" value="55555555">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Address:</label>
+                                <div class="col-lg-8">
+                                    <input class="form-control" type="text" name="address" value="Via San Vittore 34">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">City:</label>
                                 <div class="col-lg-8">
@@ -176,7 +191,8 @@ require "./php/helper/helper.php";
                     </div>
                 </div>
             </div>
-            <hr>
+
+            </div>
         <?php CommonStructure::FooterGet(); ?>
 
         </div>
