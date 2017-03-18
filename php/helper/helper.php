@@ -120,11 +120,9 @@ class CommonStructure {
 
                 </div>
             </footer>';
-        }
+    }
 
-
-
-        public static  function ScriptGet(){
+    public static function ScriptGet() {
 
 
 
@@ -146,6 +144,39 @@ class CommonStructure {
         <!-- Main -->
         <script src="js/main.js"></script>
         <script src="js/profile.js"></script>';
+    }
+
+    public static function LoginModalGet() {
+        echo '<div class="modal fade optionModal" id="loginModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="./php/controller/accountCon.php" method="post">
+                            <input class="form-control" name="action" type="hidden" value="1">
+                            <label class="col-xs-12 label label-warning labelError" id="logInError"></label>
+                            <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
+                            <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
+                           <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
+                         <!--    <span class="col-xs-6"><a href="#">Forgot your password?</a></span> -->
+                            <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Log in">
+                            </div>
+                            <div class="modal-footer">
+                                <div id="modalFooterContainer" style="width:100%;display:inline-block">
+                                    <span class="col-xs-6" style="text-align:left;padding:0">Not a member yet?</span>
+                                    <span class="col-xs-6 btnGroup">
+                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./edit_profile.php\';" data-dismiss="modal">Register</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </span>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>';
     }
 
 }
