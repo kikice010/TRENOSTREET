@@ -6,6 +6,7 @@
 -->
 <?php
 require "./php/helper/helper.php";
+session_start();
 ?>
 <html>
     <head>

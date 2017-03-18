@@ -60,7 +60,10 @@ class AccountAF {
     public function logout() {
         try {
             if ($this->user->logout()) {
-                $this->user->redirect('../../main.php');
+                return true;
+            }else{
+                
+                return false;
             }
         } catch (PDOException $e) {
             echo $e->getMessage();

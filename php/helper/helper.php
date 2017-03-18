@@ -2,7 +2,6 @@
 
 include_once '/../constants.php';
 
-
 class CommonStructure {
 
     public static function NavigationGet() {
@@ -32,7 +31,6 @@ class CommonStructure {
         } else {
 
             echo '<li><button type="button" data-toggle="modal" data-target="#loginModal"  class="btn btn-primary">Acceder</button></li>';
-            echo $_SESSION['user_session'];
         }
         echo '
 						</ul>

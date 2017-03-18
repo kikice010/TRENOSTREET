@@ -423,6 +423,7 @@ session_start();
         <script src="js/jquery.stellar.min.js"></script>
         <!-- Main -->
         <script src="js/main.js"></script>
+        <script src="js/profile.js"></script>
 
     </body>
 </html>

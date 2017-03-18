@@ -14,7 +14,7 @@ switch ($_POST['action']) {
         break;
     case AccountActionType::LOGOUT:
 
-//        $userClass->logout();
+        echo json_encode($userClass->logout());
         break;
 
     case AccountActionType::SIGNUP_FIRST:
