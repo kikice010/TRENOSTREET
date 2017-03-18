@@ -7,8 +7,10 @@ $userClass = new AccountAF();
 
 switch ($_POST['action']) {
     case AccountActionType::LOGIN:
-
-//        $userClass->login($uname, $umail, $upass);
+        $username = $_POST['emailField'];
+        $password = $_POST['passwordField'];
+        $email = $_POST['emailField'];
+        $userClass->login($username, $email, $password);
         break;
     case AccountActionType::LOGOUT:
 

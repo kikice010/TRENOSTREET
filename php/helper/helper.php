@@ -1,8 +1,7 @@
 <?php
 
-
 include_once '/../constants.php';
-session_start();
+
 
 class CommonStructure {
 
@@ -25,8 +24,17 @@ class CommonStructure {
 								</ul>
 							</li>
 							<li><a href="profile.php">Perfil</a></li>
-							<li><a href="contact">Contactos</a></li>
-							<li><button type="button" data-toggle="modal" data-target="#loginModal"  class="btn btn-primary">Acceder</button></li>
+							<li><a href="contact">Contactos</a></li>';
+
+        if (isset($_SESSION['user_session'])) {
+            echo '<li>' . $_SESSION['username'] . '</li>';
+            echo '<li><button type="button" data-toggle="modal" onclick="logout();" class="btn btn-primary">Salir</button></li>';
+        } else {
+
+            echo '<li><button type="button" data-toggle="modal" data-target="#loginModal"  class="btn btn-primary">Acceder</button></li>';
+            echo $_SESSION['user_session'];
+        }
+        echo '
 						</ul>
 					</div>
 				</div>
@@ -53,10 +61,9 @@ class CommonStructure {
 		</div>';
     }
 
-
     public static function FooterGet() {
 
-    	echo '<footer id="fh5co-footer" role="contentinfo">
+        echo '<footer id="fh5co-footer" role="contentinfo">
                 <div class="container">
                     <div class="row row-pb-md">
                         <div class="col-md-4 fh5co-widget ">
@@ -115,8 +122,6 @@ class CommonStructure {
 
                 </div>
             </footer>';
-
-     
     }
 
 }
