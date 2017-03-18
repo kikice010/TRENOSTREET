@@ -4,9 +4,7 @@ include_once("../constants.php");
 include_once '../af/accountAF.php';
 
 $userClass = new AccountAF();
-$error[];
-
-
+$error;
 switch ($_POST['action']) {
     case AccountActionType::LOGIN:
         $username = $_POST['emailField'];
