@@ -21,9 +21,9 @@ class AccountAF {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($row['username'] == $username) {
-                $error[] = "sorry username already taken !";
+                $error[] = "El username ya esta usado por otro usuario!";
             } else if ($row['email'] == $email) {
-                $error[] = "sorry email id already taken !";
+                $error[] = "El email ya esta usado por otro usuario!";
             } else {
                 if ($this->user->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num)) {
                     $this->user->redirect('main.php');
@@ -48,8 +48,8 @@ class AccountAF {
                     $_SESSION['username'] = $userRow['username'];
                     $this->user->redirect('../../main.php');
                 } else {
-
-                    $this->user->redirect('../../main.php');
+                    $error[] = "Por favor llene los datos correctamente!";
+                    return json_encode($error);
                 }
             }
         } catch (PDOException $e) {
@@ -61,8 +61,8 @@ class AccountAF {
         try {
             if ($this->user->logout()) {
                 return true;
-            }else{
-                
+            } else {
+
                 return false;
             }
         } catch (PDOException $e) {
