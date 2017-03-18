@@ -4,13 +4,15 @@ include_once("../constants.php");
 include_once '../af/accountAF.php';
 
 $userClass = new AccountAF();
+$error[];
+
 
 switch ($_POST['action']) {
     case AccountActionType::LOGIN:
         $username = $_POST['emailField'];
         $password = $_POST['passwordField'];
         $email = $_POST['emailField'];
-        $userClass->login($username, $email, $password);
+    $userClass->login($username, $email, $password);
         break;
     case AccountActionType::LOGOUT:
 

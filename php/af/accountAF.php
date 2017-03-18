@@ -49,7 +49,7 @@ class AccountAF {
                     $this->user->redirect('../../main.php');
                 } else {
                     $error[] = "Por favor llene los datos correctamente!";
-                    return json_encode($error);
+                    $this->user->redirect('../../main.php');
                 }
             }
         } catch (PDOException $e) {
