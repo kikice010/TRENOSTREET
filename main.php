@@ -382,48 +382,30 @@ session_start();
                         <h4 class="modal-title">Login</h4>
                     </div>
                     <div class="modal-body">
-                    <form action="./php/controller/accountCon.php" method="post">
-                        <input class="form-control" name="action" type="hidden" value="1">
-                        <label class="col-xs-12 label label-warning labelError" id="logInError"></label>
-                        <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
-                        <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
-                       <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
-                     <!--    <span class="col-xs-6"><a href="#">Forgot your password?</a></span> -->
-                        <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Log in">
-                    </div>
-                    <div class="modal-footer">
-                        <div id="modalFooterContainer" style="width:100%;display:inline-block">
-                            <span class="col-xs-6" style="text-align:left;padding:0">Not a member yet?</span>
-                            <span class="col-xs-6 btnGroup">
-                                <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href='./edit_profile.php';" data-dismiss="modal">Register</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </span>
-                        </div>
+                        <form action="./php/controller/accountCon.php" method="post">
+                            <input class="form-control" name="action" type="hidden" value="1">
+                            <label class="col-xs-12 label label-warning labelError" id="logInError"></label>
+                            <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
+                            <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
+                           <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
+                         <!--    <span class="col-xs-6"><a href="#">Forgot your password?</a></span> -->
+                            <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Log in">
+                            </div>
+                            <div class="modal-footer">
+                                <div id="modalFooterContainer" style="width:100%;display:inline-block">
+                                    <span class="col-xs-6" style="text-align:left;padding:0">Not a member yet?</span>
+                                    <span class="col-xs-6 btnGroup">
+                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = './edit_profile.php';" data-dismiss="modal">Register</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </span>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-       
-
-        <!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-        <!-- jQuery Easing -->
-        <script src="js/jquery.easing.1.3.js"></script>
-        <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Waypoints -->
-        <script src="js/jquery.waypoints.min.js"></script>
-        <!-- countTo -->
-        <script src="js/jquery.countTo.js"></script>
-        <!-- Magnific Popup -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/magnific-popup-options.js"></script>
-        <!-- Stellar -->
-        <script src="js/jquery.stellar.min.js"></script>
-        <!-- Main -->
-        <script src="js/main.js"></script>
-        <script src="js/profile.js"></script>
+            <?php
+            CommonStructure::ScriptGet();
+            ?>
 
     </body>
 </html>

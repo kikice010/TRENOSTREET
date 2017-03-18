@@ -56,7 +56,7 @@ require "./php/helper/helper.php";
 
         <div class="fh5co-loader"></div>
         <div id="page">
-<?php CommonStructure::NavigationGet(); ?>
+            <?php CommonStructure::NavigationGet(); ?>
             <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg);" >
                 <div class="overlay"></div>
                 <div class="container">
@@ -92,7 +92,7 @@ require "./php/helper/helper.php";
                                     <input class="form-control" type="text" value="Bikrams Yoga">
                                 </div>
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label class="col-lg-3 control-label">Course category:</label>
                                 <div class="col-lg-8">
                                     <select class="form-control itemInput" id="sel1">
@@ -169,23 +169,9 @@ require "./php/helper/helper.php";
             <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
         </div>
 
-        <!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-        <!-- jQuery Easing -->
-        <script src="js/jquery.easing.1.3.js"></script>
-        <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Waypoints -->
-        <script src="js/jquery.waypoints.min.js"></script>
-        <!-- countTo -->
-        <script src="js/jquery.countTo.js"></script>
-        <!-- Magnific Popup -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/magnific-popup-options.js"></script>
-        <!-- Stellar -->
-        <script src="js/jquery.stellar.min.js"></script>
-        <!-- Main -->
-        <script src="js/main.js"></script>
+        <?php
+        CommonStructure::ScriptGet();
+        ?>
 
     </body>
 </html>
