@@ -16,3 +16,15 @@ $('.save-course').hide();
         courseItem.find('.itemLabel').show().focus();
         //ajax call to save data
 });
+
+
+function logout(){
+		$.ajax({
+	  method: "POST",
+	  url: "../php/controller/accountCon.php",
+	  data: {action: 0}
+	  success: function(result){
+       
+    }
+	});
+}
