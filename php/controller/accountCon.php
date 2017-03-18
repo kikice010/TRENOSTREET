@@ -12,7 +12,7 @@ switch ($_POST['action']) {
         $username = $_POST['emailField'];
         $password = $_POST['passwordField'];
         $email = $_POST['emailField'];
-    $userClass->login($username, $email, $password);
+        $userClass->login($username, $email, $password);
         break;
     case AccountActionType::LOGOUT:
 

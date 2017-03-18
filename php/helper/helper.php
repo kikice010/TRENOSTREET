@@ -158,7 +158,7 @@ class CommonStructure {
                     <div class="modal-body">
                         <form action="./php/controller/accountCon.php" method="post">
                             <input class="form-control" name="action" type="hidden" value="1">
-                            <label class="col-xs-12 label label-warning labelError" id="logInError"></label>
+                            <label class="col-xs-12 label label-warning labelError" id="logInError">'. $error .'</label>
                             <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
                             <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
                            <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
