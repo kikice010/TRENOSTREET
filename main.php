@@ -380,12 +380,14 @@ require("/php/helper/helper.php");
                         <h4 class="modal-title">Login</h4>
                     </div>
                     <div class="modal-body">
+                    <form action="./php/controller/accountCon.php" method="post">
+                        <input class="form-control" name="action" type="hidden" value="1">
                         <label class="col-xs-12 label label-warning labelError" id="logInError"></label>
-                        <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email address">
+                        <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
                         <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
-                        <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span>
-                        <span class="col-xs-6"><a href="#">Forgot your password?</a></span>
-                        <button id="logInUpBtnEmail" class="btn btn-primary" onclick="logIn()">Log in</button>
+                       <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
+                     <!--    <span class="col-xs-6"><a href="#">Forgot your password?</a></span> -->
+                        <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Log in">
                     </div>
                     <div class="modal-footer">
                         <div id="modalFooterContainer" style="width:100%;display:inline-block">
