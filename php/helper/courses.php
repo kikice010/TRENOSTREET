@@ -1,53 +1,37 @@
 <?php
 
-require "../conx/conx.php";
-$connection = new DB();
+session_start();
 
-class Courses {
+class COURSES {
 
     private $db;
 
     function __construct() {
-        $this->db = $connection;
+        $this->conn = new DB();
     }
 
-    public function createNewCourse() {
-        
-    }
+    public function createNewCourse($course_name, $course_category, $course_city, $course_address, $course_description, $course_yearly, $course_montly, $course_weekly, $course_hourly) {
+        try {
 
-    public function removeCourse() {
-        
-    }
+            $stmt = $this->conn->db->prepare("INSERT INTO courses (`id_city`, `id_trainer`, `description`, `price_monthly`, `price_weekly`, `price_yearly`, `price_hour`, `name`, `address`)"
+                    . " VALUES (:course_city,:trainer,:course_description,:course_montly,:course_weekly,:course_yearly,:course_hourly,:course_name,:course_address);");
 
-    public function disableCourse($id_course) {
-        
-    }
+            $stmt->bindparam(":course_name", $course_name);
+            $stmt->bindparam(":course_category", $course_category);
+            $stmt->bindparam(":trainer", $_SESSION['user_session']);
+            $stmt->bindparam(":course_city", $course_city);
+            $stmt->bindparam(":course_address", $course_address);
+            $stmt->bindparam(":course_description", $course_description);
+            $stmt->bindparam(":course_yearly", $course_yearly);
+            $stmt->bindparam(":course_montly", $course_montly);
+            $stmt->bindparam(":course_weekly", $course_weekly);
+            $stmt->bindparam(":course_hourly", $course_hourly);
 
-    public function userCoursesGet($user_id) {
-
-
-        $stmt = $this->db->prepare("SELECT * FROM `courses` WHERE id=:id");
-        $stmt->bindParam(':id', $user_id, PDO::PARAM_INT);
-        $stm->execute();
-        return $rows = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function allCoursesListGet($filter, $orderBy, $orderDir) {
-
-        $stmt = $this->db->prepare("SELECT * FROM `courses` WHERE id=:id");
-        $stmt->bindParam(':id', $id_course, PDO::PARAM_INT);
-        $stm->execute();
-
-        return $rows = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function singleCourseGet($id) {
-
-        $id_course = $id;
-        $stmt = $connection->prepare("SELECT * FROM `courses` WHERE id=:id");
-        $stmt->bindParam(':id', $id_course, PDO::PARAM_INT);
-        $stm->execute();
-        return $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt->execute();
+            return $stmt;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
 }

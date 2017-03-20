@@ -8,7 +8,7 @@ $error;
 switch ($_POST['action']) {
 
     case CommonActionType::CITY_LIST:
-
+        $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_NUMBER_INT);
         echo $commonClass->CityListGET($country);
 
         break;
@@ -20,6 +20,12 @@ switch ($_POST['action']) {
     case CommonActionType::USER_TYPE:
 
         echo $commonClass->UserTypeGET();
+        break;
+
+    CASE CommonActionType::COURSE_TYPE_LIST:
+
+        
+        echo $commonClass->CourseTypeGET();
         break;
 
     default:

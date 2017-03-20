@@ -22,6 +22,7 @@ class CourseRequestType {
 
     const SINGLE_COURSE_GET = 0;
     const MULTIPLE_COURSES_GET = 1;
+    const COURSE_SAVE=2;
 
 }
 
@@ -39,6 +40,7 @@ class CommonActionType {
     const CITY_LIST = 0;
     const COUNTRY_LIST = 1;
     const USER_TYPE = 2;
+    const COURSE_TYPE_LIST =3;
 
 }
 
