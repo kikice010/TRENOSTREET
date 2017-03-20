@@ -15,7 +15,7 @@ class COURSES {
 
             $stmt = $this->conn->db->prepare("INSERT INTO courses (`id_city`, `id_trainer`, `description`, `price_monthly`, `price_weekly`, `price_yearly`, `price_hour`, `name`, `address`)"
                     . " VALUES (:course_city,:trainer,:course_description,:course_montly,:course_weekly,:course_yearly,:course_hourly,:course_name,:course_address);");
-
+echo $_SESSION['user_session'];
             $stmt->bindparam(":course_name", $course_name);
             $stmt->bindparam(":course_category", $course_category);
             $stmt->bindparam(":trainer", $_SESSION['user_session']);

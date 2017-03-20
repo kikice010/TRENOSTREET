@@ -85,7 +85,8 @@ require "./php/helper/helper.php";
                         </div>
                         <h3>Course info</h3>
 
-                        <form class="form-horizontal" method="post" action="../php/addcourse.php" role="form">
+                        <form class="form-horizontal" method="post" action="./php/controller/courseCon.php" role="form">
+                            <input name="action" value="2" type="hidden">
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Course name:</label>
                                 <div class="col-lg-8">
@@ -95,21 +96,14 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Course category:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control itemInput" name="course_category" id="sel1">
-                                        <option>Yoga</option>
-                                        <option>Spinning</option>
-                                        <option>Lifting</option>
+                                    <select class="form-control itemInput" name="course_category" id="course_category">
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">City:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control" id="sel2" name="course_city">
-                                        <option>Lima</option>
-                                        <option>Cusco</option>
-                                        <option>Arequipa</option>
-                                        <option>Trujillo</option>
+                                    <select class="form-control" name="course_city" id="course_city">
                                     </select>
                                 </div>
                             </div>
@@ -175,3 +169,45 @@ require "./php/helper/helper.php";
 
     </body>
 </html>
+<script>
+    $(document).ready(function () {
+  
+        var course_categories_params = {action: 3};
+        $.ajax({
+            type: "POST",
+            url: "./php/controller/commonCon.php",
+            data: course_categories_params,
+            dataType: "json",
+            success: function(response){
+                 var course_categories_select = $("#course_category");
+                
+                for(i in response){
+                    var option = ' <option  value="'+response[i].id+'">'+response[i].name+'</option>';
+                    course_categories_select.append(option);
+                }
+            },
+            error: function(response){
+                console.log(response);
+            }
+        });
+        
+         var city_params = {action: 0,country:1};
+        $.ajax({
+            type: "POST",
+            url: "./php/controller/commonCon.php",
+            data: city_params,
+            dataType: "json",
+            success: function(response){
+                var city_select = $("#course_city");
+                
+                for(i in response){
+                    var option = ' <option  value="'+response[i].id+'">'+response[i].name+'</option>';
+                    city_select.append(option);
+                }
+            },
+            error: function(response){
+                console.log(response);
+            }
+        });
+    });
+</script>

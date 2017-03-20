@@ -2,7 +2,8 @@
 
 include_once("../constants.php");
 include_once '../helper/courses.php';
-session_start();
+include_once '../af/coursesAF.php';
+
 
 $coursesClass = new CoursesAF();
 $error;
