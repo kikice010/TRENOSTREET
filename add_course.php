@@ -85,17 +85,17 @@ require "./php/helper/helper.php";
                         </div>
                         <h3>Course info</h3>
 
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" method="post" action="../php/addcourse.php" role="form">
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Course name:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="Bikrams Yoga">
+                                    <input class="form-control" name="course_name" type="text" value="Bikrams Yoga">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Course category:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control itemInput" id="sel1">
+                                    <select class="form-control itemInput" name="course_category" id="sel1">
                                         <option>Yoga</option>
                                         <option>Spinning</option>
                                         <option>Lifting</option>
@@ -105,7 +105,7 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">City:</label>
                                 <div class="col-lg-8">
-                                    <select class="form-control" id="sel1">
+                                    <select class="form-control" id="sel2" name="course_city">
                                         <option>Lima</option>
                                         <option>Cusco</option>
                                         <option>Arequipa</option>
@@ -116,13 +116,13 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Address:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" value="Via San Vittore 34">
+                                    <input class="form-control" type="text" name="course_address" value="Via San Vittore 34">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Description:</label>
                                 <div class="col-lg-8">
-                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                    <textarea class="form-control" rows="5" name="course_description" id="comment"></textarea>
                                 </div>
                             </div>
                             <hr>
@@ -130,31 +130,31 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Yearly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="number" value="1000">
+                                    <input class="form-control" name="course_yearly"  type="number" value="1000">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Monthly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="number" value="100">
+                                    <input class="form-control" name="course_montly" type="number" value="100">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Weekly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="number" value="15">
+                                    <input class="form-control" name="course_weekly" type="number" value="15">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Hourly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="number" value="5">
+                                    <input class="form-control" name="course_hourly" type="number" value="5">
                                 </div>
                             </div>        
                             <div class="form-group">
                                 <label class="col-md-3 control-label"></label>
                                 <div class="col-md-8">
-                                    <input type="button" class="btn btn-primary" value="Add course">
+                                    <input type="submit" class="btn btn-primary" value="Add course">
                                 </div>
                             </div>
                         </form>
