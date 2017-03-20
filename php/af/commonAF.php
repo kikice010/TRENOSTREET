@@ -18,7 +18,8 @@ class CommonAF {
         try {
             $stmt = $this->conn->db->prepare("SELECT id, name FROM city WHERE id_country=:country");
             $stmt->execute(array(':country' => $country));
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -31,7 +32,7 @@ class CommonAF {
 
         try {
             $stmt = $this->conn->db->prepare("SELECT id, name FROM country");
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -45,7 +46,7 @@ class CommonAF {
         try {
             $stmt = $this->conn->db->prepare("SELECT id, name FROM user_type");
 
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -59,7 +60,7 @@ class CommonAF {
         try {
             $stmt = $this->conn->db->prepare("SELECT id, name FROM `course_categories`");
 
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
