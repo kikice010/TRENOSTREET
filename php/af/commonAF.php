@@ -50,8 +50,6 @@ class CommonAF {
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
-
-
         return json_encode($row);
     }
 
