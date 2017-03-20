@@ -7,9 +7,9 @@ $userClass = new AccountAF();
 $error;
 switch ($_POST['action']) {
     case AccountActionType::LOGIN:
-        $username = $_POST['emailField'];
+        $username = filter_input(INPUT_POST, 'emailField', FILTER_SANITIZE_EMAIL);
         $password = $_POST['passwordField'];
-        $email = $_POST['emailField'];
+        $email = filter_input(INPUT_POST, 'emailField', FILTER_SANITIZE_EMAIL);
         echo $userClass->login($username, $email, $password);
         break;
     case AccountActionType::LOGOUT:
@@ -19,18 +19,16 @@ switch ($_POST['action']) {
 
     case AccountActionType::SIGNUP_FIRST:
 
-//filter_input(INPUT_POST, 'variable', FILTER_SANITIZE_SPECIAL_CHARS);
-
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
-        $userType = $_POST['userType'];
-        $description = $_POST['description'];
-        $email = $_POST['email'];
-        $age = $_POST['age'];
-        $city = $_POST['city'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $address = $_POST['address'];
+        $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING);
+        $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
+        $userType = filter_input(INPUT_POST, 'userType', FILTER_SANITIZE_NUMBER_INT);
+        $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
+        $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_NUMBER_INT);
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
+        $password = $_POST['password'];  
+        $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
         $phone_num = $_POST['phone_num'];
 
         echo $userClass->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num);
