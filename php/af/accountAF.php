@@ -6,7 +6,8 @@ session_start();
 
 class AccountAF {
 
-    private $db;
+    private $conn;
+    private $user;
 
     function __construct() {
         $this->conn = new DB();
@@ -49,7 +50,7 @@ class AccountAF {
                     $this->user->redirect('../../main.php');
                 } else {
                     $error = "Por favor llene los datos correctamente!";
-                    echo "sdewfmgkorgoienrgniowre";
+
                     $this->user->redirect('../../main.php');
                 }
             } else {
@@ -76,5 +77,4 @@ class AccountAF {
     }
 
 }
-
 ?>

@@ -29,8 +29,16 @@ class AccountActionType {
 
     const LOGOUT = 0;
     const LOGIN = 1;
-    CONST SIGNUP_FIRST = 2;
+    const SIGNUP_FIRST = 2;
     const SIGNUP_SECOND = 3;
+
+}
+
+class CommonActionType {
+
+    const CITY_LIST = 0;
+    const COUNTRY_LIST = 1;
+    const USER_TYPE = 2;
 
 }
 
