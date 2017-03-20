@@ -22,6 +22,12 @@ switch ($_POST['action']) {
         echo $commonClass->UserTypeGET();
         break;
 
+    CASE CommonActionType::COURSE_TYPE_LIST:
+
+        
+        echo $commonClass->CourseTypeGET();
+        break;
+
     default:
         echo "Unknown value for 'action'";
 }

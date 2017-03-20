@@ -4,23 +4,42 @@ include_once("../constants.php");
 include_once '../helper/courses.php';
 
 
-switch ($_GET['action']) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    case CourseRequestType::SINGLE_COURSE_GET:
+    switch ($_POST['action']) {
 
-
-
-
-        break;
-
-    case CourseRequestType::MULTIPLE_COURSES_GET:
+        case CourseRequestType::SINGLE_COURSE_GET:
 
 
 
-        break;
 
-    default:
+            break;
+        default:
 
-        echo "Unknown value for 'action'";
+            echo "Unknown value for 'action'";
+    }
+
+} else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+
+
+    switch ($_GET['action']) {
+
+        case CourseRequestType::SINGLE_COURSE_GET:
+
+
+
+
+            break;
+
+        case CourseRequestType::MULTIPLE_COURSES_GET:
+
+
+
+            break;
+
+        default:
+
+            echo "Unknown value for 'action'";
+    }
 }
 ?>
