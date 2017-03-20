@@ -27,7 +27,7 @@ switch ($_POST['action']) {
         $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
         $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_NUMBER_INT);
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
-        $password = $_POST['password'];  
+        $password = $_POST['password'];
         $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
         $phone_num = $_POST['phone_num'];
 
