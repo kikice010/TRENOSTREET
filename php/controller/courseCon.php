@@ -38,14 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         case CourseRequestType::SINGLE_COURSE_GET:
 
-
+            
 
 
             break;
 
         case CourseRequestType::MULTIPLE_COURSES_GET:
 
-
+echo $coursesClass->userCoursesGet();
 
             break;
 

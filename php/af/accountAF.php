@@ -27,7 +27,7 @@ class AccountAF {
                 $_SESSION['error'] = "El email ya esta usado por otro usuario!";
             } else {
                 if ($this->user->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num)) {
-                    $this->user->redirect('main.php');
+                    $this->user->redirect('../../main.php');
                 }
             }
         } catch (PDOException $e) {
