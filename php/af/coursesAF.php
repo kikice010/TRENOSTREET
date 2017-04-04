@@ -2,7 +2,6 @@
 
 require_once "/../conx/conx.php";
 include_once '/../helper/account.php';
-//session_start();
 
 class CoursesAF {
 
