@@ -350,28 +350,33 @@ session_start();
                     </div>
                 </div>
             </div>
-
-            <div id="fh5co-started">
+      <?php 
+      if(!isset($_SESSION['user_session'])){
+          
+               echo  '<div id="fh5co-started">
                 <div class="container">
                     <div class="row animate-box">
                         <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                            <span>Let's work together</span>
-                            <h2>Try this template for free</h2>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            <p><button type="submit" class="btn btn-primary">Get In Touch</button></p>
+                            <span>Comenzemos juntos!</span>
+                            <h2>¿Y tú, empezaste tu treno?</h2>
+                            <p>Comienza ahora! encontraras muchos cursos en tu zona!</p>
+                            <p><button type="submit" class="btn btn-primary">Registrate!</button></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>';  
+          
+      }
 
-            <?php CommonStructure::FooterGet(); ?>
+      CommonStructure::FooterGet();
+      
+      
+      ?>
         </div>
 
         <div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
         </div>
-
-
 
         <?php
             if (!isset($_SESSION['user_session'])){

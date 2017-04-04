@@ -1,8 +1,8 @@
 <?php
 
-include_once("../constants.php");
-include_once '../helper/courses.php';
-include_once '../af/coursesAF.php';
+include_once "../constants.php";
+include_once "../helper/courses.php";
+include_once "../af/coursesAF.php";
 
 $coursesClass = new CoursesAF();
 $error;

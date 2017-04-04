@@ -10,7 +10,7 @@ class CommonStructure {
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2 text-left">
-						<div id="fh5co-logo"><a href="main.php"><img class="" src="images/logo_new_2.png" height="50"/></a></div>
+						<div id="fh5co-logo"><a href="main.php"><img class="" src="images/logo_w.png" height="50"/></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
@@ -22,11 +22,10 @@ class CommonStructure {
 									<li><a href="#">Por categoria</a></li>
 								</ul>
 							</li>';
-						if (isset($_SESSION['user_session'])) {	
-                                                echo '<li><a href="profile.php">Perfil</a></li>';
-                                                    
-                                                };
-						echo '<li><a href="contact">Contactos</a></li>';
+        if (isset($_SESSION['user_session'])) {
+            echo '<li><a href="profile.php">Perfil</a></li>';
+        };
+        echo '<li><a href="contact">Contactos</a></li>';
 
         if (isset($_SESSION['user_session'])) {
             echo '<li>' . $_SESSION['username'] . '</li>';
@@ -69,61 +68,130 @@ class CommonStructure {
                     <div class="row row-pb-md">
                         <div class="col-md-4 fh5co-widget ">
                             <h3><div id="fh5co-logo"><a href="main"><img class="" src="images/logo_w.png" height="50"/></a></div></h3>
-                            <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                            <p>TrenoStreet llega a peru desde Milan Italia para crear una 
+comunidad de entrenadores independientes, gimnasios privados y publicos. Descubre una nueva manera de entrenar con TrenoStreet. Que varía entre disciplinas y has mas completo tu entrenamiento, 
+eligiendo distintas categorias por un solo precio mensual descubre el dejar la rutina y experimenta nuevas emociones.</p>
                             <p><a href="#">Learn More</a></p>
                         </div>
                         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
                             <ul class="fh5co-footer-links">
-                                <li><a href="#">About</a></li>
+                           <!--     <li><a href="#">About</a></li>
                                 <li><a href="#">Help</a></li>
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">Terms</a></li>
-                                <li><a href="#">Meetups</a></li>
+                                <li><a href="#">Meetups</a></li> -->
                             </ul>
                         </div>
 
 
                         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
                             <ul class="fh5co-footer-links">
-                                <li><a href="#">Shop</a></li>
+                             <!--   <li><a href="#">Shop</a></li>
                                 <li><a href="#">Privacy</a></li>
                                 <li><a href="#">Testimonials</a></li>
                                 <li><a href="#">Handbook</a></li>
-                                <li><a href="#">Held Desk</a></li>
+                                <li><a href="#">Held Desk</a></li> -->
                             </ul>
                         </div>
 
                         <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
                             <ul class="fh5co-footer-links">
-                                <li><a href="#">Find Designers</a></li>
+                               <!-- <li><a href="#">Find Designers</a></li>
                                 <li><a href="#">Find Developers</a></li>
                                 <li><a href="#">Teams</a></li>
                                 <li><a href="#">Advertise</a></li>
-                                <li><a href="#">API</a></li>
+                                <li><a href="#">API</a></li>-->
                             </ul>
                         </div>
-                    </div>
+                    </div>';
 
-                    <div class="row copyright">
+        echo $copyright = '<div class="row copyright">
                         <div class="col-md-12 text-center">
                             <p>
-                                <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-                                <small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
+                                <small class="block">&copy; 2017 TrenoStreet. All Rights Reserved.</small>
+                                <!--<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>-->
                             </p>
                             <p>
                             <ul class="fh5co-social-icons">
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                                <li><a target="_blank" href="' . SocialConstants::FACEBOOK_URL . '"><i class="icon-facebook"></i></a></li>
+                                <li><a target="_blank" href="' . SocialConstants::TWITTER_URL . '"><i class="icon-twitter"></i></a></li>
+                                <li><a target="_blank" href="' . SocialConstants::INSTAGRAM_URL . '"><i class="icon-instagram"></i></a></li>
                             </ul>
                             </p>
                         </div>
-                    </div>
+                    </div>';
 
-                </div>
-            </footer>';
+        echo $close = '</div></footer>';
     }
+    
+    public static function FooterWhiteGet(){
+ 
+        echo '	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget ">
+					<h3>Concept.</h3>
+					<p>TrenoStreet llega a peru desde Milan Italia para crear una 
+comunidad de entrenadores independientes, gimnasios privados y publicos. Descubre una nueva manera de entrenar con TrenoStreet. Que varía entre disciplinas y has mas completo tu entrenamiento, 
+eligiendo distintas categorias por un solo precio mensual descubre el dejar la rutina y experimenta nuevas emociones.</p>
+					<p><a href="#">Learn More</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+					<ul class="fh5co-footer-links">
+						<!--<li><a href="#">About</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Meetups</a></li>-->
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+					<ul class="fh5co-footer-links">
+						<!--<li><a href="#">Shop</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Handbook</a></li>
+						<li><a href="#">Held Desk</a></li>-->
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
+					<ul class="fh5co-footer-links">
+						<!--<li><a href="#">Find Designers</a></li>
+						<li><a href="#">Find Developers</a></li>
+						<li><a href="#">Teams</a></li>
+						<li><a href="#">Advertise</a></li>
+						<li><a href="#">API</a></li>-->
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2017 TrenoStreet. All Rights Reserved.</small>
+						<!--<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>-->
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+                                                    <li><a target="_blank" href="' . SocialConstants::FACEBOOK_URL . '"><i class="icon-facebook"></i></a></li>
+                                                    <li><a target="_blank" href="' . SocialConstants::TWITTER_URL . '"><i class="icon-twitter"></i></a></li>
+                                                    <li><a target="_blank" href="' . SocialConstants::INSTAGRAM_URL . '"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>';
+        
+        
+        
+    }
+    
+    
+    
+    
 
     public static function ScriptGet() {
 
@@ -150,34 +218,36 @@ class CommonStructure {
     }
 
     public static function LoginModalGet() {
-        $err;
-        if(isset($_SESSION['error'])){
+        if (isset($_SESSION['error'])) {
             $err = $_SESSION['error'];
-             }
+        }
+
         echo '<div class="modal fade optionModal" id="loginModal" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Login</h4>
+                        <h4 class="modal-title">Acceder a tu cuenta</h4>
                     </div>
                     <div class="modal-body">
                         <form action="./php/controller/accountCon.php" method="post">
-                            <input class="form-control" name="action" type="hidden" value="1">
-                            <label class="col-xs-12 label label-warning labelError" id="logInError">'.$err.'</label>
-                            <input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email or username">
+                            <input class="form-control" name="action" type="hidden" value="1">';
+        if (isset($err)) {
+            echo '<label class="col-xs-12 label label-warning labelError" id="logInError">' . $err . '</label>';
+        }
+        echo '<input class="col-xs-12 form-control" id="emailField" type="text" name="emailField" placeholder="Email o usuario">
                             <input class="col-xs-12 form-control" id="passwordField" type="password" name="passwordField" placeholder="Password">
-                           <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Remember me</span> -->
-                         <!--    <span class="col-xs-6"><a href="#">Forgot your password?</a></span> -->
-                            <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Log in">
+                           <!--  <span class="col-xs-6"><input type="checkbox" name="rememberMeField">Recuerdame</span> -->
+                         <!--    <span class="col-xs-6"><a href="#">Te olvidaste tu contraseña?</a></span> -->
+                            <input id="logInUpBtnEmail" type="submit" class="btn btn-primary" value="Acceder">
                             </div>
                             <div class="modal-footer">
                                 <div id="modalFooterContainer" style="width:100%;display:inline-block">
-                                    <span class="col-xs-6" style="text-align:left;padding:0">Not a member yet?</span>
+                                    <span class="col-xs-6" style="text-align:left;padding:0">Todavia no te haz registrado?</span>
                                     <span class="col-xs-6 btnGroup">
-                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./edit_profile.php\';" data-dismiss="modal">Register</button>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./edit_profile.php\';" data-dismiss="modal">Registrate</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                     </span>
                                 </div>
                             </div>

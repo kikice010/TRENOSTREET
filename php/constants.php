@@ -12,7 +12,7 @@ class TextConstants {
 
 class SocialConstants {
 
-    const FACEBOOK_URL = "";
+    const FACEBOOK_URL = "https://www.facebook.com/trenostreet";
     const INSTAGRAM_URL = "";
     const TWITTER_URL = "";
 

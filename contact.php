@@ -5,8 +5,8 @@
 	URL: http://gettemplates.co
 -->
 <?php
-
 require "/php/helper/helper.php";
+session_start();
  ?>
 <html>
 	<head>
@@ -82,52 +82,52 @@ require "/php/helper/helper.php";
 				<div class="col-md-5 col-md-push-1 animate-box">
 
 					<div class="fh5co-contact-info">
-						<h3>Contact Information</h3>
+						<h3>Contactos</h3>
 						<ul>
-							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li class="url"><a href="http://gettemplates.co">gettemplates.co</a></li>
+							<li class="address">198 West 21th Street, <br> Jorge Muelle 345</li>
+							<li class="phone"><a href="tel://1234567920">+51 4752352</a></li>
+							<li class="email"><a href="mailto:info@yoursite.com">info@trenostreet.com</a></li>
+							<li class="url"><a href="http://www.trenostreet.com">www.trenostreet.com</a></li>
 						</ul>
 					</div>
 
 				</div>
 				<div class="col-md-6 animate-box">
-					<h3>Get In Touch</h3>
+					<h3>Estar en contacto</h3>
 					<form action="#">
 						<div class="row form-group">
 							<div class="col-md-6">
-								<label for="fname">First Name</label>
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+								<label for="fname">Primer nombre</label>
+								<input type="text" id="fname" class="form-control" placeholder="Primer nombre">
 							</div>
 							<div class="col-md-6">
-								<label for="lname">Last Name</label>
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+								<label for="lname">Apellido</label>
+								<input type="text" id="lname" class="form-control" placeholder="Apellido">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="email">Email</label>
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<label for="email">Correo electronico</label>
+								<input type="text" id="email" class="form-control" placeholder="Correo electronico">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="subject">Subject</label>
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<label for="subject">Objeto</label>
+								<input type="text" id="subject" class="form-control" placeholder="Objeto">
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+								<label for="message">Mensaje</label>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Pregunta lo que quieras estamos aqui para ayudarte."></textarea>
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-lg btn-primary">
+							<input type="submit" value="Enviar" class="btn btn-lg btn-primary">
 						</div>
 
 					</form>
@@ -138,78 +138,28 @@ require "/php/helper/helper.php";
 	</div>
 
 
+      <?php 
+      if(!isset($_SESSION['user_session'])){
+          
+               echo  '<div id="fh5co-started">
+                <div class="container">
+                    <div class="row animate-box">
+                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                            <span>Comenzemos juntos!</span>
+                            <h2>¿Y tú, empezaste tu treno?</h2>
+                            <p>Comienza ahora! encontraras muchos cursos en tu zona!</p>
+                            <p><button type="submit" class="btn btn-primary">Registrate!</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>';  
+          
+      }
 
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<span>Let's work together</span>
-					<h2>Try this template for free</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-					<p><button type="submit" class="btn btn-default">Get In Touch</button></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row row-pb-md">
-				<div class="col-md-4 fh5co-widget ">
-					<h3>Concept.</h3>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-					<p><a href="#">Learn More</a></p>
-				</div>
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-					<ul class="fh5co-footer-links">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">Meetups</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Shop</a></li>
-						<li><a href="#">Privacy</a></li>
-						<li><a href="#">Testimonials</a></li>
-						<li><a href="#">Handbook</a></li>
-						<li><a href="#">Held Desk</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Find Designers</a></li>
-						<li><a href="#">Find Developers</a></li>
-						<li><a href="#">Teams</a></li>
-						<li><a href="#">Advertise</a></li>
-						<li><a href="#">API</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
-						<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer>
+      CommonStructure::FooterWhiteGet();
+      
+      
+      ?>
 	</div>
 
 	<div class="gototop js-top">
