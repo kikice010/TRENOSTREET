@@ -20,7 +20,7 @@ class CoursesAF {
         try {
 
             if ($this->courses->createNewCourse($course_name, $course_category, $course_city, $course_address, $course_description, $course_yearly, $course_montly, $course_weekly, $course_hourly)) {
-                $this->user->redirect('main.php');
+                $this->user->redirect('../../main.php');
             } else {
 
 
@@ -33,14 +33,17 @@ class CoursesAF {
         return json_encode($error);
     }
 
-//    public function userCoursesGet($user_id) {
-//
-//
-//        $stmt = $this->conn->db->prepare("SELECT * FROM `courses` WHERE id=:id");
-//        $stmt->bindParam(':id', $user_id, PDO::PARAM_INT);
-//        $stm->execute();
-//        return $rows = $stmt->fetch(PDO::FETCH_ASSOC);
-//    }
+    public function userCoursesGet() {
+        try {
+
+            return json_encode($this->courses->userCoursesGet());
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+
+        return json_encode($error);
+
+    }
 //
 //    public function allCoursesListGet($filter, $orderBy, $orderDir) {
 //

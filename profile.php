@@ -294,10 +294,24 @@ session_start();
 </html>
 
 <script>
-
-    $( document ).ready(function() {
+    $(document).ready(function () {
         $('.itemInput').hide();
         $('.save-course').hide();
+  
+        var user_courses = {action: 1};
+        $.ajax({
+            type: "GET",
+            url: "./php/controller/courseCon.php",
+            data: user_courses,
+            dataType: "json",
+            success: function(response){
+                console.log(response);
+            },
+            error: function(response){
+                console.log(response);
+            }
+        });
+        
+        
     });
-
 </script>

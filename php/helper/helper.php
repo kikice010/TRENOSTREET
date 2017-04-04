@@ -10,7 +10,7 @@ class CommonStructure {
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2 text-left">
-						<div id="fh5co-logo"><a href="main.php"><img class="" src="images/logo_w.png" height="50"/></a></div>
+						<div id="fh5co-logo"><a href="main.php"><img class="" src="images/logo_new_2.png" height="50"/></a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>

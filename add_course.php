@@ -110,7 +110,7 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Address:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" type="text" name="course_address" value="Via San Vittore 34">
+                                    <input class="form-control" type="text" name="course_address">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -124,25 +124,25 @@ require "./php/helper/helper.php";
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Yearly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" name="course_yearly"  type="number" value="1000">
+                                    <input class="form-control" name="course_yearly"  type="number">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Monthly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" name="course_montly" type="number" value="100">
+                                    <input class="form-control" name="course_montly" type="number">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Weekly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" name="course_weekly" type="number" value="15">
+                                    <input class="form-control" name="course_weekly" type="number">
                                 </div>
                             </div>   
                             <div class="form-group">
                                 <label class="col-lg-3 control-label">Hourly:</label>
                                 <div class="col-lg-8">
-                                    <input class="form-control" name="course_hourly" type="number" value="5">
+                                    <input class="form-control" name="course_hourly" type="number">
                                 </div>
                             </div>        
                             <div class="form-group">
