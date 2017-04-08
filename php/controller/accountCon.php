@@ -34,7 +34,9 @@ switch ($_POST['action']) {
         echo $userClass->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num);
 
         break;
-
+    case AccountActionType::PROFILE_GET:
+        echo json_encode($userClass->profileGet());
+        break;
     default:
 
         echo "Unknown value for 'action'";
