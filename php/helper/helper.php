@@ -123,9 +123,9 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
 
         echo $close = '</div></footer>';
     }
-    
-    public static function FooterWhiteGet(){
- 
+
+    public static function FooterWhiteGet() {
+
         echo '	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row row-pb-md">
@@ -184,18 +184,9 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
 
 		</div>
 	</footer>';
-        
-        
-        
     }
-    
-    
-    
-    
 
     public static function ScriptGet() {
-
-
 
         echo '<!-- jQuery -->
         <script src="js/jquery.min.js"></script>
@@ -247,23 +238,25 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
                                 <div id="modalFooterContainer" style="width:100%;display:inline-block">
                                     <span class="col-xs-6" style="text-align:left;padding:0">Todavia no te haz registrado?</span>
                                     <span class="col-xs-6 btnGroup">
-                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./edit_profile.php\';" data-dismiss="modal">Registrate</button>
+                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./editprofile.php\';" data-dismiss="modal">Registrate</button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                     </span>
                                 </div>
                             </div>
                     </div>
                 </div>
-            </div>';
+          </div>';
     }
-    
-    public static function HeaderGet(){
-        
-        
-        
+
+    public static function HeaderGet() {
+
+
+
         echo '<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>'; echo TextConstants::TRENOSTREET; echo '</title>
+        <title>';
+        echo TextConstants::TRENOSTREET;
+        echo '</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="<?php echo TextConstants::DESCRIPTION; ?>" />
         <meta name="keywords" content="<?php echo TextConstants::KEYWORDS; ?>" />
@@ -301,16 +294,13 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->';
-        
-        
     }
-    
-    public static function GoTopGet(){
-        
+
+    public static function GoTopGet() {
+
         echo '<div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
         </div>';
-
     }
 
 }

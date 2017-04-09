@@ -7,11 +7,10 @@
 <?php
 require "./php/helper/helper.php";
 session_start();
-if(!isset($_SESSION['user_session'])){
+if (!isset($_SESSION['user_session'])) {
     header("Location:main.php");
-    exit(); 
+    exit();
 }
-
 ?>
 <html>
     <head>
@@ -110,7 +109,7 @@ if(!isset($_SESSION['user_session'])){
                                     <div class="row">
                                         <label class="col-md-3"></label>
                                         <div class="col-md-8">
-                                            <input type="button" class="btn btn-primary" onclick="location.href = './edit_profile.php';" value="Edit Profile">
+                                            <input type="button" class="btn btn-primary" onclick="location.href = './editprofile.php';" value="Edit Profile">
                                         </div>
                                     </div>
                                 </div>
@@ -246,28 +245,26 @@ if(!isset($_SESSION['user_session'])){
         CommonStructure::GoTopGet();
         CommonStructure::ScriptGet();
         ?>
-        
-         <script type="text/javascript">
-        $(document).ready(function () {
-            $('.itemInput').hide();
-            $('.save-course').hide();
 
-            var user_courses = {action: 1};
-            $.ajax({
-                type: "GET",
-                url: "./php/controller/courseCon.php",
-                data: user_courses,
-                dataType: "json",
-                success: function (response) {
-                    console.log(response);
-                },
-                error: function (response) {
-                    console.log(response);
-                }
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.itemInput').hide();
+                $('.save-course').hide();
+
+                var user_courses = {action: 1};
+                $.ajax({
+                    type: "GET",
+                    url: "./php/controller/courseCon.php",
+                    data: user_courses,
+                    dataType: "json",
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    error: function (response) {
+                        console.log(response);
+                    }
+                });
             });
-
-
-        });
-    </script>        
+        </script>        
     </body>
 </html>

@@ -127,16 +127,13 @@ session_start();
 
         </div>
 
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
         <?php
+        CommonStructure::GoTopGet();
+        CommonStructure::ScriptGet();
+        
         if (!isset($_SESSION['user_session'])) {
             CommonStructure::LoginModalGet();
         }
-        ?>
-        <?php
-        CommonStructure::ScriptGet();
         ?>
 
     </body>

@@ -6,13 +6,11 @@
 -->
 <?php
 require("/php/helper/helper.php");
-
 session_start();
 ?>
 <html>
     <head>
         <?php CommonStructure::HeaderGet(); ?>
-
     </head>
     <body>
 
@@ -80,8 +78,6 @@ session_start();
                 </div>
 
             </div>
-
-
 
             <div id="fh5co-services" class="fh5co-bg-section border-bottom">
                 <div class="container">
@@ -167,7 +163,6 @@ session_start();
                 </div>
             </div>
 
-
             <div id="fh5co-testimonial" class="fh5co-bg-section">
                 <div class="container">
                     <div class="row animate-box row-pb-md">
@@ -216,7 +211,6 @@ session_start();
                     </div>
                 </div>
             </div>
-
 
             <div id="fh5co-counter">
                 <div class="container">
@@ -311,9 +305,9 @@ session_start();
                     </div>
                 </div>
             </div>
+
             <?php
             if (!isset($_SESSION['user_session'])) {
-
                 echo '<div id="fh5co-started">
                 <div class="container">
                     <div class="row animate-box">
@@ -321,29 +315,30 @@ session_start();
                             <span>Comenzemos juntos!</span>
                             <h2>¿Y tú, empezaste tu treno?</h2>
                             <p>Comienza ahora! encontraras muchos cursos en tu zona!</p>
-                            <p><button type="submit" class="btn btn-primary">Registrate!</button></p>
+                            <p><button id="regBtn" class="btn btn-primary">Registrate!</button></p>
                         </div>
                     </div>
                 </div>
             </div>';
             }
-
             CommonStructure::FooterGet();
             ?>
         </div>
 
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
-
-<?php
-if (!isset($_SESSION['user_session'])) {
-    CommonStructure::LoginModalGet();
-}
-?>
         <?php
+        CommonStructure::GoTopGet();
         CommonStructure::ScriptGet();
+
+        if (!isset($_SESSION['user_session'])) {
+            CommonStructure::LoginModalGet();
+        }
         ?>
+
+        <script type="text/javascript">
+            document.getElementById("regBtn").onclick = function () {
+                location.href = "/TRENOSTREET/editprofile.php";
+            };
+        </script>
 
     </body>
 </html>
