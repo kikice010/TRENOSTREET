@@ -121,7 +121,7 @@ if (!isset($_SESSION['user_session'])) {
                                 <br>
                                 <div class="row form">
                                     <div class="col-md-2 pull-right">
-                                        <input type="button" class="btn btn-primary" value="Crear curso" onclick="location.href = './add_course.php';">     
+                                        <input type="button" class="btn btn-primary" value="Crear curso" onclick="location.href = './addcourse.php';">     
                                     </div>           
                                 </div>
                                 <br>

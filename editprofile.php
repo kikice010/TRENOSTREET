@@ -7,6 +7,10 @@
 <?php
 require "./php/helper/helper.php";
 session_start();
+if (!isset($_SESSION['user_session'])) {
+    header("Location:main.php");
+    exit();
+}
 ?>
 <html>
     <head>
