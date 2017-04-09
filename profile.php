@@ -49,72 +49,6 @@ if (!isset($_SESSION['user_session'])) {
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="profile">
                                 <br>
-                                <div class="row">
-                                    <!-- left column -->
-                                    <div class="col-md-3">
-                                        <div class="text-center">
-                                            <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                                        </div>
-                                    </div>
-
-                                    <!-- edit form column -->
-                                    <div class="col-md-9 personal-info">
-                                        <div class="row">
-                                            <label class="col-lg-3">Nombre:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_firstname">Milica</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Apellido:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_lastname">Jovanovic</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Tipo de usuario:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_type">Trainer</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Descripción:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Email:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_email">kikice010@gmail.com</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Edad:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_age">25</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-lg-3">Ciudad:</label>
-                                            <div class="col-lg-8">
-                                                <label id="user_city">Cusco</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-md-3">Nombre de usuario:</label>
-                                            <div class="col-md-8">
-                                                <label id="user_username"></label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <label class="col-md-3"></label>
-                                            <div class="col-md-8">
-                                                <input type="button" class="btn btn-primary" onclick="location.href = './editprofile.php';" value="Edit Profile">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                             <div role="tabpanel" class="tab-pane" id="courses">
@@ -125,116 +59,10 @@ if (!isset($_SESSION['user_session'])) {
                                     </div>           
                                 </div>
                                 <br>
-
-                                <!-- edit form column -->
-                                <div class="col-md-8 personal-info courseIdItem">
-                                    <div class="row">
-                                        <label class="col-lg-3 control-label">Curso:</label>
-                                        <div class="col-lg-8">
-                                            <label id="course_name" class="control-label itemLabel">Bikrams Yoga</label>
-                                            <input class="form-control itemInput" type="text" value="milica">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-lg-3 control-label">Categoria:</label>
-                                        <div class="col-lg-8">
-                                            <label id="course_name" class="control-label itemLabel">Yoga</label>
-                                            <select class="form-control itemInput" id="sel1">
-                                                <option>Yoga</option>
-                                                <option>Spinning</option>
-                                                <option>Lifting</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-lg-3 control-label">Direccion:</label>
-                                        <div class="col-lg-8">
-                                            <label id="course_address" class="control-label itemLabel">Via San Vittore 34</label>
-                                            <input class="form-control itemInput" type="text" value="milica">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-lg-3">Ciudad:</label>
-                                        <div class="col-lg-8">
-                                            <label id="course_city" class="itemLabel">Milano</label>
-                                            <select class="form-control itemInput" id="sel1">
-                                                <option>Lima</option>
-                                                <option>Cusco</option>
-                                                <option>Arequipa</option>
-                                                <option>Trujillo</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-lg-3">Descripción:</label>
-                                        <div class="col-lg-8">
-                                            <label id="course_address" class="itemLabel">Bikram Yoga is a system of yoga that Bikram Choudhury synthesized from traditional hatha yoga techniques and popularized beginning in the early 1970s. All Bikram Yoga classes run for 90 minutes and consist of the same series of 26 postures, including two breathing exercises. Bikram Yoga is ideally practiced in a room heated to 40 °C (104 °F) with a humidity of 40%. All official Bikram classes are taught by Bikram-certified teachers, who have completed nine weeks of training endorsed by Choudhury. Bikram-certified teachers are taught a standardized dialogue to run the class, but are encouraged to develop their teaching skills the longer they teach. This results in varying deliveries and distinct teaching styles.</label>
-                                            <textarea class="form-control itemInput" rows="5" id="comment"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 courseIdItem">
-                                    <table class="table table-condensed">
-                                        <thead>
-                                            <tr>
-                                                <th>Inscripciones</th>
-                                                <th>Precio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Anual</td>
-                                                <td><span class="itemLabel">1000</span><input class=" itemInput" type="text" value="1000"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mensual</td>
-                                                <td><span class="itemLabel">100</span><input class="itemInput" type="text" value="100"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Semanal</td>
-                                                <td><span class="itemLabel">15</span><input class="itemInput" type="text" value="15"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Horario</td>
-                                                <td><span class="itemLabel">5</span><input class="itemInput" type="text" value="5"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <input type="button" class="btn btn-primary modify-course" id="courseId" value="Edita el curso">
-                                    <input type="button" class="btn btn-primary save-course" id="courseId" value="Guardad los cambios">
-                                </div>
                             </div>
 
                             <div role="tabpanel" class="tab-pane" id="subscriptions">
                                 <br>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <table class="table table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Cursos</th>
-                                                    <th>Tipo de inscripcion</th>
-                                                    <th>Comienzo</th>
-                                                    <th>Fin</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Bikrams Yoga</td>
-                                                    <td>Monthly</td>
-                                                    <td>12/3/2017</td>
-                                                    <td>12/4/2017</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Crossfit</td>
-                                                    <td>Yearly</td>
-                                                    <td>12/3/2017</td>
-                                                    <td>12/3/2018</td>
-                                                </tr>
-                                            </tbody>
-                                        </table> 
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -252,20 +80,173 @@ if (!isset($_SESSION['user_session'])) {
             $(document).ready(function () {
                 $('.itemInput').hide();
                 $('.save-course').hide();
-
+                var user_profile = {action: 4};
                 var user_courses = {action: 1};
-                $.ajax({
-                    type: "GET",
-                    url: "./php/controller/courseCon.php",
-                    data: user_courses,
-                    dataType: "json",
-                    success: function (response) {
-                        console.log(response);
-                    },
-                    error: function (response) {
-                        console.log(response);
+                var course_categories_params = {action: 3};
+                var city_params = {action: 0, country: 1};
+                var type_params = {action: 2};
+                var course_categories;
+                var user_courses;
+                var cities;
+                $.when(
+                        $.ajax({
+                            type: "GET",
+                            url: "./php/controller/courseCon.php",
+                            data: user_courses,
+                            dataType: "json",
+                            error: function (response) {
+                                console.log(response);
+                            }
+                        }),
+                        $.ajax({
+                            type: "POST",
+                            url: "./php/controller/commonCon.php",
+                            data: course_categories_params,
+                            dataType: "json",
+                            error: function (response) {
+                                console.log(response);
+                            }
+                        }),
+                        $.ajax({
+                            type: "POST",
+                            url: "./php/controller/commonCon.php",
+                            data: city_params,
+                            dataType: "json",
+                            error: function (response) {
+                                console.log(response);
+                            }
+                        }),
+                        $.ajax({
+                            type: "POST",
+                            url: "./php/controller/accountCon.php",
+                            data: user_profile,
+                            dataType: "json",
+                            error: function (response) {
+                                console.log(response);
+                            }
+                        }),
+                        $.ajax({
+                            type: "POST",
+                            url: "./php/controller/commonCon.php",
+                            data: type_params,
+                            dataType: "json",
+                            error: function (response) {
+                                console.log(response);
+                            }
+                        }))
+                        .then(function (res1, res2, res3, res4, res5) {
+                            user_courses = res1[0];
+                            course_categories = res2[0];
+                            cities = res3[0];
+                            profile = res4[0];
+                            types = res5[0];
+                            user_courses.forEach(function (course) {
+                                AddCourseEntity(course, course_categories, cities);
+                            });
+                            SetUserProfile(profile, types, cities);
+
+                            $('.itemInput').hide();
+                            $('.save-course').hide();
+
+                            $(".modify-course").off("click").on("click", function () {
+                                $('.save-course').show();
+                                $('.modify-course').hide();
+                                var id = $(this)[0].id;
+                                var ret = id.split("_");
+                                var courseId = ret[1];
+                                var courseItem = $("." + courseId + "Item");
+                                courseItem.find('.itemLabel').hide();
+                                courseItem.find('.itemInput').show().focus();
+                            });
+                            $(".save-course").off("click").on("click", function () {
+                                $('.modify-course').show();
+                                $('.save-course').hide();
+                                var id = $(this)[0].id;
+                                var ret = id.split("_");
+                                var courseId = ret[1];
+                                var courseItem = $("." + courseId + "Item");
+                                courseItem.find('.itemInput').hide();
+                                courseItem.find('.itemLabel').show().focus();
+                                //ajax call to save data
+                            });
+                        }
+
+                        );
+                var AddCourseEntity = function (course, categories, cities) {
+                    var category = getCategory(course.id_category, categories);
+                    var city = getCity(course.id_city, cities);
+                    var courseEntity = '<div class="col-md-8 personal-info ' + course.id + 'Item"><div class="row"><label class="col-lg-3 control-label">Curso:</label><div class="col-lg-8">' +
+                            '<label id="course_name' + course.id + '" class="control-label itemLabel">' + course.name + '</label><input class="form-control itemInput" type="text" value="' + course.name + '"></div>' +
+                            '</div><div class="row"><label class="col-lg-3 control-label">Categoria:</label><div class="col-lg-8"><label id="category_name_' + course.id + '_' + category.id + '" class="control-label">' + category.name + '</label>' +
+                            '</div></div><div class="row"><label class="col-lg-3 control-label">Direccion:</label><div class="col-lg-8"><label class="control-label itemLabel">' +
+                            course.address + '</label><input class="form-control itemInput" type="text" value="' + course.address + '"></div></div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8">' +
+                            '<label class="itemLabel">' + city.name + '</label><select class="form-control itemInput" id="city_sel_' + course.id + '"></select></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
+                            '<div class="col-lg-8"><label class="itemLabel">' + course.description + '</label><textarea class="form-control itemInput" rows="5" id="description_' + course.id + '">' + course.description + '</textarea></div></div></div>' +
+                            '<div class="col-md-4 courseIdItem"><table class="table table-condensed"><thead><tr><th>Inscripciones</th><th>Precio</th></tr></thead><tbody><tr><td>Anual</td>' +
+                            '<td><span class="itemLabel">' + course.price_yearly + '</span><input class="itemInput" type="text" value="' + course.price_yearly + '"></td></tr><tr><td>Mensual</td>' +
+                            '<td><span class="itemLabel">' + course.price_monthly + '</span><input class="itemInput" type="text" value="' + course.price_monthly + '"></td></tr><tr><td>Semanal</td>' +
+                            '<td><span class="itemLabel">' + course.price_weekly + '</span><input class="itemInput" type="text" value="' + course.price_weekly + '"></td></tr><tr><td>Horario</td>' +
+                            '<td><span class="itemLabel">' + course.price_hour + '</span><input class="itemInput" type="text" value="' + course.price_hour + '"></td></tr></tbody></table>' +
+                            '<input type="button" class="btn btn-primary modify-course" id="modify_' + course.id + '" value="Edita el curso">' +
+                            '<input type="button" class="btn btn-primary save-course" id="save_' + course.id + '" value="Guardad los cambios"></div><br>';
+
+                    $("#courses").append(courseEntity);
+                    var city_select = $("#city_sel_" + course.id);
+
+                    for (var i = 0; i < cities.length; i++) {
+                        var option = ' <option  value="' + cities[i].id + '">' + cities[i].name + '</option>';
+                        city_select.append(option);
                     }
-                });
+
+
+                }
+
+                var getCategory = function (id, categories) {
+                    for (var i = 0; i < categories.length; i++) {
+                        if (id == categories[i].id)
+                            return categories[i];
+                    }
+
+                    return "ERROR";
+
+                }
+
+                var getCity = function (id, cities) {
+                    for (var i = 0; i < cities.length; i++) {
+                        if (id == cities[i].id)
+                            return cities[i];
+                    }
+                    return "ERROR";
+
+                }
+
+                var getUserType = function (id, types) {
+                    for (var i = 0; i < types.length; i++) {
+                        if (id == types[i].id)
+                            return types[i];
+                    }
+                    return "ERROR";
+
+                }
+
+                var SetUserProfile = function (profile, types, cities) {
+                    var type = getUserType(profile.type, types);
+                    var city = getCity(profile.id_city, cities);
+                    var profileEntity = '<div class="row"><div class="col-md-3"><div class="text-center"><img src="//placehold.it/100" class="avatar img-circle" alt="avatar"></div></div>' +
+                            '<div class="col-md-9 personal-info"><div class="row"><label class="col-lg-3">Nombre:</label><div class="col-lg-8"><label id="user_firstname">' + profile.name + '</label>' +
+                            '</div></div><div class="row"><label class="col-lg-3">Apellido:</label><div class="col-lg-8"><label id="user_lastname">' + profile.surname + '</label></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Tipo de usuario:</label><div class="col-lg-8"><label id="user_type">' + type.name + '</label></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
+                            '<div class="col-lg-8"><label id="user_description">' + profile.description + '</label></div></div><div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8">' +
+                            '<label id="user_email">' + profile.email + '</label></div></div><div class="row"><label class="col-lg-3">Edad:</label><div class="col-lg-8"><label id="user_age">' + profile.age + '</label></div>' +
+                            '</div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8"><label id="user_city">' + city.name + '</label></div></div><div class="row"><label class="col-md-3">Nombre de usuario:</label>' +
+                            '<div class="col-md-8"><label id="user_username">' + profile.username + '</label></div></div><div class="row"><label class="col-md-3"></label><div class="col-md-8">' +
+                            '<input type="button" class="btn btn-primary" onclick="location.href=\'./editprofile.php\'" value="Edit Profile"></div></div></div></div>';
+
+                    $("#profile").append(profileEntity);
+
+
+                }
+
             });
         </script>        
     </body>

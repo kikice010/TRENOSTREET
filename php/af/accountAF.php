@@ -77,7 +77,7 @@ class AccountAF {
     }
     
     public function profileGet() {
-        $this->user->profileGet();
+        return $this->user->profileGet();
     }
 
 }

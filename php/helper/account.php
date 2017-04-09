@@ -67,7 +67,8 @@ class USER {
     public function profileGet() {
         try {
             $stmt = $this->conn->db->prepare("SELECT * FROM user WHERE id=:id LIMIT 1");
-            $stmt->execute(array(':id' => $_SESSION["user_session"]));
+            $stmt->bindparam(':id' , $_SESSION["user_session"]);
+            $stmt->execute();
             $userRow = $stmt->fetch(PDO::FETCH_ASSOC);
             return $userRow;
         } catch (PDOException $e) {
