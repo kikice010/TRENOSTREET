@@ -8,7 +8,7 @@ class USER {
         $this->conn = new DB();
     }
 
-    public function register($firstname, $lastname, $userType, $description, $email, $age, $city,  $username, $password, $address, $phone_num) {
+    public function register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num) {
         try {
             $new_password = password_hash($password, PASSWORD_DEFAULT);
             $stmt = $this->conn->db->prepare("INSERT INTO user(name,surname,type,description,email,age,id_city,username,password,address,phone_num) VALUES (:name,:surname,:type,:description,:email,:age,:id_city,:username,:password,:address,:phone_num)");
@@ -62,6 +62,17 @@ class USER {
         session_destroy();
         unset($_SESSION['user_session']);
         return true;
+    }
+
+    public function profileGet() {
+        try {
+            $stmt = $this->conn->db->prepare("SELECT * FROM user WHERE id=:id LIMIT 1");
+            $stmt->execute(array(':id' => $_SESSION["user_session"]));
+            $userRow = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $userRow;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
 }
