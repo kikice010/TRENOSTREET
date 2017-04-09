@@ -36,9 +36,7 @@ if (!isset($_SESSION['user_session'])) {
             </header>
             <div class="container">
                 <div class="row">
-                    <h1>Perfil</h1>
-
-                    <hr>
+                    <br/>
                     <div>
                         <ul class="nav nav-tabs">
                             <li role="presentation" class="active"><a href="#profile" role="tab" data-toggle="tab">Datos personales</a></li>
@@ -175,20 +173,20 @@ if (!isset($_SESSION['user_session'])) {
                 var AddCourseEntity = function (course, categories, cities) {
                     var category = getCategory(course.id_category, categories);
                     var city = getCity(course.id_city, cities);
-                    var courseEntity = '<div class="col-md-8 personal-info ' + course.id + 'Item"><div class="row"><label class="col-lg-3 control-label">Curso:</label><div class="col-lg-8">' +
+                    var courseEntity = '<div class="row"><div class="col-md-8 personal-info ' + course.id + 'Item"><div class="row"><label class="col-lg-3 control-label">Curso:</label><div class="col-lg-8">' +
                             '<label id="course_name' + course.id + '" class="control-label itemLabel">' + course.name + '</label><input class="form-control itemInput" type="text" value="' + course.name + '"></div>' +
                             '</div><div class="row"><label class="col-lg-3 control-label">Categoria:</label><div class="col-lg-8"><label id="category_name_' + course.id + '_' + category.id + '" class="control-label">' + category.name + '</label>' +
                             '</div></div><div class="row"><label class="col-lg-3 control-label">Direccion:</label><div class="col-lg-8"><label class="control-label itemLabel">' +
                             course.address + '</label><input class="form-control itemInput" type="text" value="' + course.address + '"></div></div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8">' +
                             '<label class="itemLabel">' + city.name + '</label><select class="form-control itemInput" id="city_sel_' + course.id + '"></select></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
                             '<div class="col-lg-8"><label class="itemLabel">' + course.description + '</label><textarea class="form-control itemInput" rows="5" id="description_' + course.id + '">' + course.description + '</textarea></div></div></div>' +
-                            '<div class="col-md-4 courseIdItem"><table class="table table-condensed"><thead><tr><th>Inscripciones</th><th>Precio</th></tr></thead><tbody><tr><td>Anual</td>' +
+                            '<div class="col-md-4 '+course.id+'Item"><table class="table table-condensed"><thead><tr><th>Inscripciones</th><th>Precio</th></tr></thead><tbody><tr><td>Anual</td>' +
                             '<td><span class="itemLabel">' + course.price_yearly + '</span><input class="itemInput" type="text" value="' + course.price_yearly + '"></td></tr><tr><td>Mensual</td>' +
                             '<td><span class="itemLabel">' + course.price_monthly + '</span><input class="itemInput" type="text" value="' + course.price_monthly + '"></td></tr><tr><td>Semanal</td>' +
                             '<td><span class="itemLabel">' + course.price_weekly + '</span><input class="itemInput" type="text" value="' + course.price_weekly + '"></td></tr><tr><td>Horario</td>' +
                             '<td><span class="itemLabel">' + course.price_hour + '</span><input class="itemInput" type="text" value="' + course.price_hour + '"></td></tr></tbody></table>' +
                             '<input type="button" class="btn btn-primary modify-course" id="modify_' + course.id + '" value="Edita el curso">' +
-                            '<input type="button" class="btn btn-primary save-course" id="save_' + course.id + '" value="Guardad los cambios"></div><br>';
+                            '<input type="button" class="btn btn-primary save-course" id="save_' + course.id + '" value="Guardad los cambios"></div></div><hr/>';
 
                     $("#courses").append(courseEntity);
                     var city_select = $("#city_sel_" + course.id);

@@ -1394,4 +1394,9 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-small-cover {
   height: 200px; }
 
+.username-style {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px; }
+
 /*# sourceMappingURL=main.css.map */

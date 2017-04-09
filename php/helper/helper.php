@@ -28,7 +28,7 @@ class CommonStructure {
         echo '<li><a href="contact">Contactos</a></li>';
 
         if (isset($_SESSION['user_session'])) {
-            echo '<li>' . $_SESSION['username'] . '</li>';
+            echo '<li><label class="username-style">' . $_SESSION['username'] . '</label></li>';
             echo '<li><button type="button" data-toggle="modal" onclick="logout();" class="btn btn-primary">Salir</button></li>';
         } else {
 
