@@ -84,9 +84,9 @@ session_start();
                     <div class="row row-pb-md">
                         <div class="col-md-8 col-md-offset-2 text-left animate-box" data-animate-effect="fadeInUp">
                             <div class="fh5co-heading">
-                                <span>We're expert</span>
-                                <h2>What We Do</h2>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                <span>En que somos expertos</span>
+                                <h2>Quienes somos</h2>
+                                <p>TrenoStreet nace para crear una comunidad de entrenadores independientes, gimnasios privados y publicos.</p>
                             </div>
                         </div>
                     </div>
@@ -94,11 +94,11 @@ session_start();
                         <div class="col-md-4 col-sm-6 ">
                             <div class="feature-center animate-box" data-animate-effect="fadeInUp">
                                 <span class="icon">
-                                    <i class="icon-eye"></i>
+                                    <i class="icon-warning"></i>
                                 </span>
-                                <h3>Retina Ready</h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p><a href="#">Learn more</a></p>
+                                <h3>Check de entrenadores</h3>
+                                <p>Nonostros elegimos los mejores entrenadores de tu ciudad para garantizarte un entrenamiento de acuerdo a tu nivel.</p>
+                                <p><a href="#"></a></p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 ">
@@ -106,9 +106,9 @@ session_start();
                                 <span class="icon">
                                     <i class="icon-command"></i>
                                 </span>
-                                <h3>Fully Responsive</h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p><a href="#">Learn more</a></p>
+                                <h3>Comunidad</h3>
+                                <p>Formar parte de la comunidad de entrenamiento TrenoStreet te aportará un nuevo incentivo a la hora de mantenerte en forma.</p>
+                                <p><a href="#"></a></p>
                             </div>
                         </div>
                         <div class="clearfix visible-sm-block"></div>
@@ -123,9 +123,9 @@ session_start();
                             </div>
                         </div>
 
-                        <div class="clearfix visible-md-block"></div>
+<!--                        <div class="clearfix visible-md-block"></div>-->
 
-                        <div class="col-md-4 col-sm-6 ">
+<!--                        <div class="col-md-4 col-sm-6 ">
                             <div class="feature-center animate-box" data-animate-effect="fadeInUp">
                                 <span class="icon">
                                     <i class="icon-eye"></i>
@@ -155,9 +155,9 @@ session_start();
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                                 <p><a href="#">Learn more</a></p>
                             </div>
-                        </div>
+                        </div>-->
 
-                        <div class="clearfix visible-md-block"></div>
+                        <!--<div class="clearfix visible-md-block"></div>-->
 
                     </div>
                 </div>
