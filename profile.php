@@ -7,6 +7,11 @@
 <?php
 require "./php/helper/helper.php";
 session_start();
+if(!isset($_SESSION['user_session'])){
+    header("Location:main.php");
+    exit(); 
+}
+
 ?>
 <html>
     <head>
@@ -236,20 +241,13 @@ session_start();
             </div>
         </div>
         <br>
-
-        <?php CommonStructure::FooterGet(); ?>
-
-
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
-
         <?php
+        CommonStructure::FooterGet();
+        CommonStructure::GoTopGet();
         CommonStructure::ScriptGet();
         ?>
-
-    </body>
-    <script type="text/javascript">
+        
+         <script type="text/javascript">
         $(document).ready(function () {
             $('.itemInput').hide();
             $('.save-course').hide();
@@ -270,5 +268,6 @@ session_start();
 
 
         });
-    </script>
+    </script>        
+    </body>
 </html>

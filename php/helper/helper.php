@@ -305,6 +305,13 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
         
     }
     
+    public static function GoTopGet(){
+        
+        echo '<div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+        </div>';
+
+    }
 
 }
 
