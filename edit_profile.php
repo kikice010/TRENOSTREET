@@ -10,48 +10,7 @@ session_start();
 ?>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?php echo TextConstants::TRENOSTREET; ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="<?php echo TextConstants::DESCRIPTION; ?>" />
-        <meta name="keywords" content="<?php echo TextConstants::KEYWORDS; ?>" />
-        <meta name="author" content="<?php echo TextConstants::AUTHOR; ?>" />
-
-        <!-- Facebook and Twitter integration -->
-        <meta property="og:title" content=""/>
-        <meta property="og:image" content=""/>
-        <meta property="og:url" content=""/>
-        <meta property="og:site_name" content=""/>
-        <meta property="og:description" content=""/>
-        <meta name="twitter:title" content="" />
-        <meta name="twitter:image" content="" />
-        <meta name="twitter:url" content="" />
-        <meta name="twitter:card" content="" />
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Icomoon Icon Fonts-->
-        <link rel="stylesheet" href="css/icomoon.css">
-        <!-- Bootstrap  -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-
-        <!-- Magnific Popup -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
-
-        <!-- Theme style  -->
-        <link rel="stylesheet" href="css/main.css">
-
-        <link rel="stylesheet" href="css/index.css">
-
-        <!-- Modernizr JS -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
-        <!-- FOR IE9 below -->
-        <!--[if lt IE 9]>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
+        <?php CommonStructure::HeaderGet(); ?>
 
     </head>
     <body>
@@ -206,40 +165,40 @@ session_start();
 <script>
     $(document).ready(function () {
 
-        var city_params = {action: 0,country:1};
+        var city_params = {action: 0, country: 1};
         $.ajax({
             type: "POST",
             url: "./php/controller/commonCon.php",
             data: city_params,
             dataType: "json",
-            success: function(response){
+            success: function (response) {
                 var city_select = $("#user_city");
-                
-                for(i in response){
-                    var option = ' <option  value="'+response[i].id+'">'+response[i].name+'</option>';
+
+                for (i in response) {
+                    var option = ' <option  value="' + response[i].id + '">' + response[i].name + '</option>';
                     city_select.append(option);
                 }
             },
-            error: function(response){
+            error: function (response) {
                 console.log(response);
             }
         });
-        
+
         var user_type_params = {action: 2};
         $.ajax({
             type: "POST",
             url: "./php/controller/commonCon.php",
             data: user_type_params,
             dataType: "json",
-            success: function(response){
-                 var user_type_select = $("#userType");
-                
-                for(i in response){
-                    var option = ' <option  value="'+response[i].id+'">'+response[i].name+'</option>';
+            success: function (response) {
+                var user_type_select = $("#userType");
+
+                for (i in response) {
+                    var option = ' <option  value="' + response[i].id + '">' + response[i].name + '</option>';
                     user_type_select.append(option);
                 }
             },
-            error: function(response){
+            error: function (response) {
                 console.log(response);
             }
         });
