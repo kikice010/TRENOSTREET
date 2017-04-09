@@ -238,7 +238,7 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
                                 <div id="modalFooterContainer" style="width:100%;display:inline-block">
                                     <span class="col-xs-6" style="text-align:left;padding:0">Todavia no te haz registrado?</span>
                                     <span class="col-xs-6 btnGroup">
-                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./editprofile.php\';" data-dismiss="modal">Registrate</button>
+                                        <button type="button" id="signUpLogInModalButton" class="btn btn-primary" onclick="location.href = \'./register.php\';" data-dismiss="modal">Registrate</button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                     </span>
                                 </div>

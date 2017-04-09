@@ -336,7 +336,7 @@ session_start();
 
         <script type="text/javascript">
             document.getElementById("regBtn").onclick = function () {
-                location.href = "/TRENOSTREET/editprofile.php";
+                location.href = "/TRENOSTREET/register.php";
             };
         </script>
 

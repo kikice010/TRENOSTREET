@@ -58,28 +58,28 @@ session_start();
                             <h3>Personal info</h3>
 
                             <form class="form-horizontal" method="post" action="./php/controller/accountCon.php" role="form">
-                                <input class="form-control" name="action" type="hidden" value="2">
+    <input class="form-control" name="action" type="hidden" value="2">
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">First name:</label>
+                                    <label class="col-lg-3 control-label">Nombre:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" name="firstname" type="text" value="Milica">
+                                        <input class="form-control" name="firstname" type="text" value="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Last name:</label>
+                                    <label class="col-lg-3 control-label">Apellido:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" name="lastname" type="text" value="Jovanovic">
+                                        <input class="form-control" name="lastname" type="text" value="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">User type:</label>
+                                    <label class="col-lg-3 control-label">Tipo de cuenta:</label>
                                     <div class="col-lg-8">
                                         <select class="form-control"  name="userType" id="userType">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Description:</label>
+                                    <label class="col-lg-3 control-label">Hablanos de ti:</label>
                                     <div class="col-lg-8">
                                         <textarea class="form-control" name="description" rows="5" id="description"></textarea>
                                     </div>
@@ -87,50 +87,50 @@ session_start();
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Email:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" type="text" name="email" value="kikice010@gmail.com">
+                                        <input class="form-control" type="text" name="email" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Age:</label>
+                                    <label class="col-lg-3 control-label">Edad:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" name="age" type="number" value="25">
+                                        <input class="form-control" name="age" type="number" value="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Phone number:</label>
+                                    <label class="col-lg-3 control-label">Teléfono móvil:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" name="phone_num" type="tel" value="55555555">
+                                        <input class="form-control" name="phone_num" type="tel" placeholder="+51...">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Address:</label>
+                                    <label class="col-lg-3 control-label">Direccion:</label>
                                     <div class="col-lg-8">
-                                        <input class="form-control" type="text" name="address" value="Via San Vittore 34">
+                                        <input class="form-control" type="text" name="address" placeholder="Avenida...">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">City:</label>
+                                    <label class="col-lg-3 control-label">Ciudad:</label>
                                     <div class="col-lg-8">
                                         <select class="form-control" name="city" id="user_city">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label">Username:</label>
+                                    <label class="col-md-3 control-label">Nombre de usuario:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" name="username" type="text" value="milica">
+                                        <input class="form-control" name="username" type="text" placeholder="usuario">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label">Password:</label>
+                                    <label class="col-md-3 control-label">Constraseña:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" name="password" type="password" value="11111122333">
+                                        <input class="form-control" name="password" type="password" value="">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label">Confirm password:</label>
+                                    <label class="col-md-3 control-label">Repetir contraseña:</label>
                                     <div class="col-md-8">
-                                        <input class="form-control" type="password" value="11111122333">
+                                        <input class="form-control" type="password" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
