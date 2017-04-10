@@ -14,7 +14,7 @@ class AccountAF {
         $this->user = new USER();
     }
 
-    public function register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num) {
+    public function register($firstname, $lastname, $userType, $description, $email,$sex, $age, $city, $username, $password, $address, $phone_num) {
 
         try {
             $stmt = $this->conn->db->prepare("SELECT username,email FROM user WHERE username=:username OR email=:email");
@@ -26,7 +26,7 @@ class AccountAF {
             } else if ($row['email'] == $email) {
                 $_SESSION['error'] = "El email ya esta usado por otro usuario!";
             } else {
-                if ($this->user->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num)) {
+                if ($this->user->register($firstname, $lastname, $userType, $description, $email,$sex, $age, $city, $username, $password, $address, $phone_num)) {
                     $this->user->redirect('../../main.php');
                 }
             }
@@ -35,7 +35,7 @@ class AccountAF {
         }
 
 
-        return json_encode($error);
+        return $_SESSION['error'];
     }
 
     public function login($username, $email, $password) {

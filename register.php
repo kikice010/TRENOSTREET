@@ -96,6 +96,15 @@ session_start();
                                         <input class="form-control" name="age" type="number" value="">
                                     </div>
                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-lg-3 control-label">Género:</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="sex" id="sex">
+                                            <option value="M">M</option>
+                                            <option value="F">F</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Teléfono móvil:</label>
                                     <div class="col-lg-8">

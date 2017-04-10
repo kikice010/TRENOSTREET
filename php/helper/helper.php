@@ -130,7 +130,7 @@ eligiendo distintas categorias por un solo precio mensual descubre el dejar la r
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-4 fh5co-widget ">
-					<h3>Concept.</h3>
+					 <h3><div id="fh5co-logo"><a href="main"><img class="" src="images/logo_w.png" height="50"/></a></div></h3>
 					<p>TrenoStreet llega a peru desde Milan Italia para crear una 
 comunidad de entrenadores independientes, gimnasios privados y publicos. Descubre una nueva manera de entrenar con TrenoStreet. Que varía entre disciplinas y has mas completo tu entrenamiento, 
 eligiendo distintas categorias por un solo precio mensual descubre el dejar la rutina y experimenta nuevas emociones.</p>

@@ -236,6 +236,7 @@ if (!isset($_SESSION['user_session'])) {
                             '<div class="row"><label class="col-lg-3">Tipo de usuario:</label><div class="col-lg-8"><label id="user_type">' + type.name + '</label></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
                             '<div class="col-lg-8"><label id="user_description">' + profile.description + '</label></div></div><div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8">' +
                             '<label id="user_email">' + profile.email + '</label></div></div><div class="row"><label class="col-lg-3">Edad:</label><div class="col-lg-8"><label id="user_age">' + profile.age + '</label></div>' +
+                            '</div><div class="row"><label class="col-lg-3">Género:</label><div class="col-lg-8"><label id="user_sex">' + profile.sex + '</label></div>' +
                             '</div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8"><label id="user_city">' + city.name + '</label></div></div><div class="row"><label class="col-md-3">Nombre de usuario:</label>' +
                             '<div class="col-md-8"><label id="user_username">' + profile.username + '</label></div></div><div class="row"><label class="col-md-3"></label><div class="col-md-8">' +
                             '<input type="button" class="btn btn-primary" onclick="location.href=\'./editprofile.php\'" value="Edit Profile"></div></div></div></div>';

@@ -30,8 +30,9 @@ switch ($_POST['action']) {
         $password = $_POST['password'];
         $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
         $phone_num = $_POST['phone_num'];
+        $sex = $_POST['sex'];
 
-        echo $userClass->register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num);
+        echo $userClass->register($firstname, $lastname, $userType, $description, $email,$sex, $age, $city, $username, $password, $address, $phone_num);
 
         break;
     case AccountActionType::PROFILE_GET:

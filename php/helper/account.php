@@ -8,10 +8,10 @@ class USER {
         $this->conn = new DB();
     }
 
-    public function register($firstname, $lastname, $userType, $description, $email, $age, $city, $username, $password, $address, $phone_num) {
+    public function register($firstname, $lastname, $userType, $description, $email,$sex, $age, $city, $username, $password, $address, $phone_num) {
         try {
             $new_password = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $this->conn->db->prepare("INSERT INTO user(name,surname,type,description,email,age,id_city,username,password,address,phone_num) VALUES (:name,:surname,:type,:description,:email,:age,:id_city,:username,:password,:address,:phone_num)");
+            $stmt = $this->conn->db->prepare("INSERT INTO user(name,surname,type,description,email,age,id_city,username,password,address,phone_num,sex) VALUES (:name,:surname,:type,:description,:email,:age,:id_city,:username,:password,:address,:phone_num,:sex)");
             $stmt->bindparam(":name", $firstname);
             $stmt->bindparam(":surname", $lastname);
             $stmt->bindparam(":type", $userType);
@@ -23,6 +23,7 @@ class USER {
             $stmt->bindparam(":password", $new_password);
             $stmt->bindparam(":address", $address);
             $stmt->bindparam(":phone_num", $phone_num);
+            $stmt->bindparam(":sex", $sex);
             $stmt->execute();
             return $stmt;
         } catch (PDOException $e) {
