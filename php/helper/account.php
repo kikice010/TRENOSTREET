@@ -76,6 +76,23 @@ class USER {
             echo $e->getMessage();
         }
     }
+    
+     public function profileUpdate($firstname, $lastname, $description, $age, $city, $address, $phone_num) {
+        try {
+            $stmt = $this->conn->db->prepare("UPDATE user SET name=:name,surname=:surname,description=:description,age=:age,id_city=:city,address=:address,phone_num=:phone_num WHERE id=:id LIMIT 1");
+            $stmt->bindparam(":name", $firstname);
+            $stmt->bindparam(":surname", $lastname);
+            $stmt->bindparam(":description", $description);
+            $stmt->bindparam(":age", $age);
+            $stmt->bindparam(":city", $city);
+            $stmt->bindparam(":address", $address);
+            $stmt->bindparam(":phone_num", $phone_num);
+            $stmt->bindparam(':id' , $_SESSION["user_session"]);
+            return($stmt->execute());
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 
 }
 

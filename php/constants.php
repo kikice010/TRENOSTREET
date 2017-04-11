@@ -33,6 +33,7 @@ class AccountActionType {
     const SIGNUP_FIRST = 2;
     const SIGNUP_SECOND = 3;
     const PROFILE_GET = 4;
+    const PROFILE_UPDATE = 5;
 
 }
 

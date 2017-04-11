@@ -38,8 +38,19 @@ switch ($_POST['action']) {
     case AccountActionType::PROFILE_GET:
         echo json_encode($userClass->profileGet());
         break;
+     case AccountActionType::PROFILE_UPDATE:
+         $firstname = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $lastname = filter_input(INPUT_POST, 'surname', FILTER_SANITIZE_STRING);
+        $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
+        $age = filter_input(INPUT_POST, 'age', FILTER_SANITIZE_NUMBER_INT);
+        $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_NUMBER_INT);
+        $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+        $phone_num = $_POST['phone'];
+        echo json_encode($userClass->profileUpdate($firstname, $lastname, $description, $age, $city, $address, $phone_num));
+        break;
     default:
 
         echo "Unknown value for 'action'";
+
 }
 ?>

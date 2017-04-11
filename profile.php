@@ -169,7 +169,7 @@ if (!isset($_SESSION['user_session'])) {
                                 courseItem.find('.itemLabel').show().focus();
                                 //ajax call to save data
                             });
-                            
+
                             $("#modify_user").off("click").on("click", function () {
                                 $('#save_user').show();
                                 $('#modify_user').hide();
@@ -180,10 +180,9 @@ if (!isset($_SESSION['user_session'])) {
                             $("#save_user").off("click").on("click", function () {
                                 $('#modify_user').show();
                                 $('#save_user').hide();
-                               var userItem = $("#profile");
-                                userItem.find('.itemInput').hide();
-                                userItem.find('.itemLabel').show().focus();
-                                //ajax call to save data
+
+                                UpdateUserProfile();
+
                             });
                         }
 
@@ -198,7 +197,7 @@ if (!isset($_SESSION['user_session'])) {
                             course.address + '</label><input class="form-control itemInput" type="text" value="' + course.address + '"></div></div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8">' +
                             '<label class="itemLabel">' + city.name + '</label><select class="form-control itemInput" id="city_sel_' + course.id + '"></select></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
                             '<div class="col-lg-8"><label class="itemLabel">' + course.description + '</label><textarea class="form-control itemInput" rows="5" id="description_' + course.id + '">' + course.description + '</textarea></div></div></div>' +
-                            '<div class="col-md-4 '+course.id+'Item"><table class="table table-condensed"><thead><tr><th>Inscripciones</th><th>Precio</th></tr></thead><tbody><tr><td>Anual</td>' +
+                            '<div class="col-md-4 ' + course.id + 'Item"><table class="table table-condensed"><thead><tr><th>Inscripciones</th><th>Precio</th></tr></thead><tbody><tr><td>Anual</td>' +
                             '<td><span class="itemLabel">' + course.price_yearly + '</span><input class="itemInput" type="text" value="' + course.price_yearly + '"></td></tr><tr><td>Mensual</td>' +
                             '<td><span class="itemLabel">' + course.price_monthly + '</span><input class="itemInput" type="text" value="' + course.price_monthly + '"></td></tr><tr><td>Semanal</td>' +
                             '<td><span class="itemLabel">' + course.price_weekly + '</span><input class="itemInput" type="text" value="' + course.price_weekly + '"></td></tr><tr><td>Horario</td>' +
@@ -245,25 +244,80 @@ if (!isset($_SESSION['user_session'])) {
 
                 }
 
+                var UpdateUserProfile = function () {
+                    var user_params = {
+                        action: 5,
+                        name: $("#user_firstname_input").val(),
+                        surname: $("#user_lastname_input").val(),
+                        description: $("#user_description_input").val(),
+                        age: $("#user_age_input").val(),
+                        city: $("#city_sel_user").val(),
+                        address: $("#user_address_input").val(),
+                        phone: $("#user_phone_input").val()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "./php/controller/accountCon.php",
+                        data: user_params,
+                        dataType: "json",
+                        error: function (response) {
+                            console.log(response);
+                        },
+                        success: function (response) {
+                            var city = getCity(user_params.city, cities);
+                            $("#user_firstname").text(user_params.name);
+                            $("#user_lastname").text(user_params.surname);
+                            $("#user_description").text(user_params.description);
+                            $("#user_age").text(user_params.age);
+                            $("#city_sel_user").text(city.name);
+                            $("#user_address").text(user_params.address);
+                            $("#user_phone").text(user_params.phone);
+                            var userItem = $("#profile");
+                            userItem.find('.itemInput').hide();
+                            userItem.find('.itemLabel').show().focus();
+                        }
+                    });
+
+                }
+
                 var SetUserProfile = function (profile, types, cities) {
                     var type = getUserType(profile.type, types);
                     var city = getCity(profile.id_city, cities);
                     var profileEntity = '<div class="row"><div class="col-md-3"><div class="text-center"><img src="//placehold.it/100" class="avatar img-circle" alt="avatar"></div></div>' +
-                            '<div class="col-md-9 personal-info"><div class="row"><label class="col-lg-3">Nombre:</label><div class="col-lg-8"><label class="itemLabel" id="user_firstname">' + profile.name + '</label><input class="form-control itemInput" type="text" value="' + profile.name + '">' +
-                            '</div></div><div class="row"><label class="col-lg-3">Apellido:</label><div class="col-lg-8"><label class="itemLabel" id="user_lastname">' + profile.surname + '</label><input class="form-control itemInput" type="text" value="' + profile.surname + '"></div></div>' +
-                            '<div class="row"><label class="col-lg-3">Tipo de usuario:</label><div class="col-lg-8"><label id="user_type">' + type.name + '</label></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
-                            '<div class="col-lg-8"><label class="itemLabel" id="user_description">' + profile.description + '</label><textarea class="form-control itemInput" rows="5" id="user_description">' + profile.description + '</textarea></div></div><div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8">' +
-                            '<label id="user_email">' + profile.email + '</label></div></div><div class="row"><label class="col-lg-3">Edad:</label><div class="col-lg-8"><label id="user_age">' + profile.age + '</label></div>' +
-                            '</div><div class="row"><label class="col-lg-3">Género:</label><div class="col-lg-8"><label id="user_sex">' + profile.sex + '</label></div>' +
-                            '</div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8"><label id="user_city">' + city.name + '</label></div></div><div class="row"><label class="col-md-3">Nombre de usuario:</label>' +
-                            '<div class="col-md-8"><label id="user_username">' + profile.username + '</label></div></div><div class="row"><label class="col-md-3"></label><div class="col-md-8">' +
-                            '<input type="button" class="btn btn-primary modify-button" id="modify_user" value="Edita el Perfil">'+
+                            '<div class="col-md-9 personal-info"><div class="row"><label class="col-lg-3">Nombre:</label><div class="col-lg-8"><label class="itemLabel" id="user_firstname">' + profile.name +
+                            '</label><input id="user_firstname_input" class="form-control itemInput" type="text" value="' + profile.name + '"></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Apellido:</label><div class="col-lg-8"><label class="itemLabel" id="user_lastname">' + profile.surname + '</label>' +
+                            '<input id="user_lastname_input" class="form-control itemInput" type="text" value="' + profile.surname + '"></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Tipo de usuario:</label><div class="col-lg-8"><label id="user_type">' + type.name + '</label></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Descripción:</label><div class="col-lg-8"><label class="itemLabel" id="user_description">' + profile.description + '</label>' +
+                            '<textarea class="form-control itemInput" rows="5" id="user_description_input">' + profile.description + '</textarea></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8"><label id="user_email">' + profile.email + '</label></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Edad:</label><div class="col-lg-8"><label class="itemLabel" id="user_age">' + profile.age + '</label>' +
+                            '<input id="user_age_input" class="form-control itemInput" type="number" value="' + profile.age + '"></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Género:</label><div class="col-lg-8"><label id="user_sex">' + profile.sex + '</label></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8"><label class="itemLabel" id="user_city">' + city.name + '</label>' +
+                            '<select class="form-control itemInput" id="city_sel_user"></select></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Direccion:</label><div class="col-lg-8"><label class="itemLabel" id="user_address">' + profile.address + '</label>' +
+                            '<input id="user_address_input" class="form-control itemInput" type="text" value="' + profile.address + '"></div></div>' +
+                            '<div class="row"><label class="col-lg-3">Teléfono móvil:</label><div class="col-lg-8"><label class="itemLabel" id="user_phone">' + profile.phone_num + '</label>' +
+                            '<input id="user_phone_input" class="form-control itemInput" type="tel" placeholder="+51..." value="' + profile.phone_num + '"></div></div>' +
+                            '<div class="row"><label class="col-md-3">Nombre de usuario:</label><div class="col-md-8"><label id="user_username">' + profile.username + '</label></div></div>' +
+                            '<div class="row"><label class="col-md-3"></label><div class="col-md-8"><input type="button" class="btn btn-primary modify-button" id="modify_user" value="Edita el Perfil">' +
                             '<input type="button" class="btn btn-primary save-button" id="save_user" value="Guardad los cambios"></div></div></div></div>';
 
                     $("#profile").append(profileEntity);
 
+                    var city_select = $("#city_sel_user");
+
+                    for (var i = 0; i < cities.length; i++) {
+                        var option = ' <option  value="' + cities[i].id + '">' + cities[i].name + '</option>';
+                        city_select.append(option);
+                    }
 
                 }
+
+
+
 
             });
         </script>        

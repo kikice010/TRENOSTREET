@@ -62,6 +62,19 @@ class AccountAF {
             echo $e->getMessage();
         }
     }
+    
+     public function profileUpdate($firstname, $lastname, $description, $age, $city, $address, $phone_num) {
+        try {
+            if ($this->user->profileUpdate($firstname, $lastname, $description, $age, $city, $address, $phone_num)) {
+                return true;
+            } else {
+
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
 
     public function logout() {
         try {
