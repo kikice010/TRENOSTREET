@@ -18,7 +18,6 @@ class CommonStructure {
 							<li class="has-dropdown">
 								<a href="courses.php">Cursos</a>
 								<ul class="dropdown">
-									<li><a href="#">Por distrito</a></li>
 									<li><a href="#">Por categoria</a></li>
 								</ul>
 							</li>';

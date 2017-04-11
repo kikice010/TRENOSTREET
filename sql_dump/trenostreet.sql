@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2017 at 10:44 PM
+-- Generation Time: Apr 11, 2017 at 09:05 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -77,6 +77,17 @@ CREATE TABLE `courses` (
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`id`, `id_city`, `id_trainer`, `description`, `price_monthly`, `price_weekly`, `price_yearly`, `price_hour`, `name`, `address`) VALUES
+(46, 1, 5, 'Relaxing yoga in park', 300, 50, 1000, 10, 'Bikrams Yoga', 'Via Lima 5'),
+(47, 1, 5, 'Relaxing yoga in park', 300, 50, 1000, 10, 'Bikrams Yoga', 'Via Lima 5'),
+(48, 1, 5, 'Relaxing yoga in park', 300, 50, 1000, 10, 'Bikrams Yoga', 'Via Lima 5'),
+(49, 1, 5, 'sy', 44, 4, 3344, 4, 'Bikrams Yoga', 'syz'),
+(50, 1, 6, 'gdsads', 23, 6, 122, 2, 'Bikrams Yoga', 'hgsfd');
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +126,15 @@ CREATE TABLE `has_category` (
   `id_course` int(11) NOT NULL,
   `id_category` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `has_category`
+--
+
+INSERT INTO `has_category` (`id`, `id_course`, `id_category`) VALUES
+(7, 48, 1),
+(8, 49, 1),
+(9, 50, 1);
 
 -- --------------------------------------------------------
 
@@ -160,15 +180,20 @@ CREATE TABLE `user` (
   `password` varchar(100) NOT NULL,
   `id_city` int(4) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `phone_num` varchar(20) NOT NULL
+  `phone_num` varchar(20) NOT NULL,
+  `sex` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `surname`, `username`, `type`, `age`, `email`, `address`, `password`, `id_city`, `description`, `phone_num`) VALUES
-(2, 'Milica', 'Jovanovic', 'milica', 0, 25, 'kikice010@gmail.com', 'Via San Vittore 34', '$2y$10$mb0.fA8.fqeO6tfQ7pm3Je1ZdDGu55Um1R8cMd.p8l4WQyhSfaCSC', 1, 'rege', '55555555');
+INSERT INTO `user` (`id`, `name`, `surname`, `username`, `type`, `age`, `email`, `address`, `password`, `id_city`, `description`, `phone_num`, `sex`) VALUES
+(2, 'Milica', 'Jovanovic', 'milica', 0, 25, 'kikice010@gmail.com', 'Via San Vittore 34', '$2y$10$mb0.fA8.fqeO6tfQ7pm3Je1ZdDGu55Um1R8cMd.p8l4WQyhSfaCSC', 1, 'rege', '55555555', NULL),
+(3, 'Danilo', 'Mladenovic', 'niloda88', 1, 29, 'niloda88@gmail.com', 'Via San Vittore 34', '$2y$10$k/fP1zJRstZ/3tDjNMLZM.0ABrraY3dVREGq3NwuUpkIDYghIAjye', 2, 'Baja do jaja', '55555555', NULL),
+(4, 'Renzo', 'Cabrejos', 'renzo', 1, 25, 'renzo@gmail.com', 'Via San Vittore 34', '$2y$10$EfcgcMAnJDP.CfRbqOanV.zam3n5vf7tSDhFFAsvUxDVxvnO6OUke', 1, 'Weight lifting instructor', '55555555', NULL),
+(5, 'Milica', 'Jovanovic', 'm', 1, 25, 'm@m.m', 'Via San Vittore 34', '$2y$10$CXemxI33Ka0GTh6/7TM1TumdyV13fVyWCl8FuilKhBhX7LmtRKKnS', 1, 'dsa', '55555555', NULL),
+(6, 'Milica', 'Jovanovic', 'milica25', 1, 25, 'milica@milica.milica', 'Via Via 5', '$2y$10$e.ldaPgrkBKd34Yv70GJpeA69JD4Pt9BPdjXWiMTCH.e8QtbrwzZe', 1, 'Special girl :P', '333333', 'F');
 
 -- --------------------------------------------------------
 
@@ -213,8 +238,8 @@ ALTER TABLE `country`
 --
 ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_city` (`id_city`,`id_trainer`),
-  ADD KEY `id_trainer` (`id_trainer`);
+  ADD KEY `id_trainer` (`id_trainer`),
+  ADD KEY `id_city` (`id_city`,`id_trainer`) USING BTREE;
 
 --
 -- Indexes for table `course_categories`
@@ -278,7 +303,7 @@ ALTER TABLE `country`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `course_categories`
 --
@@ -288,7 +313,7 @@ ALTER TABLE `course_categories`
 -- AUTO_INCREMENT for table `has_category`
 --
 ALTER TABLE `has_category`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `subscription`
 --
@@ -303,12 +328,12 @@ ALTER TABLE `subscription_type`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `user_type`
 --
 ALTER TABLE `user_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
@@ -323,15 +348,15 @@ ALTER TABLE `city`
 -- Constraints for table `courses`
 --
 ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`id_trainer`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `courses_ibfk_2` FOREIGN KEY (`id_city`) REFERENCES `city` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`id_trainer`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION,
+  ADD CONSTRAINT `courses_ibfk_2` FOREIGN KEY (`id_city`) REFERENCES `city` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `has_category`
 --
 ALTER TABLE `has_category`
-  ADD CONSTRAINT `has_category_ibfk_1` FOREIGN KEY (`id_course`) REFERENCES `courses` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `has_category_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `course_categories` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `has_category_ibfk_1` FOREIGN KEY (`id_course`) REFERENCES `courses` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `has_category_ibfk_2` FOREIGN KEY (`id_category`) REFERENCES `course_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `subscription`

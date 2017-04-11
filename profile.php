@@ -78,6 +78,7 @@ if (!isset($_SESSION['user_session'])) {
             $(document).ready(function () {
                 $('.itemInput').hide();
                 $('.save-course').hide();
+                $('#save_user').hide();
                 var user_profile = {action: 4};
                 var user_courses = {action: 1};
                 var course_categories_params = {action: 3};
@@ -145,6 +146,7 @@ if (!isset($_SESSION['user_session'])) {
 
                             $('.itemInput').hide();
                             $('.save-course').hide();
+                            $('#save_user').hide();
 
                             $(".modify-course").off("click").on("click", function () {
                                 $('.save-course').show();
@@ -165,6 +167,22 @@ if (!isset($_SESSION['user_session'])) {
                                 var courseItem = $("." + courseId + "Item");
                                 courseItem.find('.itemInput').hide();
                                 courseItem.find('.itemLabel').show().focus();
+                                //ajax call to save data
+                            });
+                            
+                            $("#modify_user").off("click").on("click", function () {
+                                $('#save_user').show();
+                                $('#modify_user').hide();
+                                var userItem = $("#profile");
+                                userItem.find('.itemLabel').hide();
+                                userItem.find('.itemInput').show().focus();
+                            });
+                            $("#save_user").off("click").on("click", function () {
+                                $('#modify_user').show();
+                                $('#save_user').hide();
+                               var userItem = $("#profile");
+                                userItem.find('.itemInput').hide();
+                                userItem.find('.itemLabel').show().focus();
                                 //ajax call to save data
                             });
                         }
@@ -231,15 +249,16 @@ if (!isset($_SESSION['user_session'])) {
                     var type = getUserType(profile.type, types);
                     var city = getCity(profile.id_city, cities);
                     var profileEntity = '<div class="row"><div class="col-md-3"><div class="text-center"><img src="//placehold.it/100" class="avatar img-circle" alt="avatar"></div></div>' +
-                            '<div class="col-md-9 personal-info"><div class="row"><label class="col-lg-3">Nombre:</label><div class="col-lg-8"><label id="user_firstname">' + profile.name + '</label>' +
-                            '</div></div><div class="row"><label class="col-lg-3">Apellido:</label><div class="col-lg-8"><label id="user_lastname">' + profile.surname + '</label></div></div>' +
+                            '<div class="col-md-9 personal-info"><div class="row"><label class="col-lg-3">Nombre:</label><div class="col-lg-8"><label class="itemLabel" id="user_firstname">' + profile.name + '</label><input class="form-control itemInput" type="text" value="' + profile.name + '">' +
+                            '</div></div><div class="row"><label class="col-lg-3">Apellido:</label><div class="col-lg-8"><label class="itemLabel" id="user_lastname">' + profile.surname + '</label><input class="form-control itemInput" type="text" value="' + profile.surname + '"></div></div>' +
                             '<div class="row"><label class="col-lg-3">Tipo de usuario:</label><div class="col-lg-8"><label id="user_type">' + type.name + '</label></div></div><div class="row"><label class="col-lg-3">Descripción:</label>' +
-                            '<div class="col-lg-8"><label id="user_description">' + profile.description + '</label></div></div><div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8">' +
+                            '<div class="col-lg-8"><label class="itemLabel" id="user_description">' + profile.description + '</label><textarea class="form-control itemInput" rows="5" id="user_description">' + profile.description + '</textarea></div></div><div class="row"><label class="col-lg-3">Email:</label><div class="col-lg-8">' +
                             '<label id="user_email">' + profile.email + '</label></div></div><div class="row"><label class="col-lg-3">Edad:</label><div class="col-lg-8"><label id="user_age">' + profile.age + '</label></div>' +
                             '</div><div class="row"><label class="col-lg-3">Género:</label><div class="col-lg-8"><label id="user_sex">' + profile.sex + '</label></div>' +
                             '</div><div class="row"><label class="col-lg-3">Ciudad:</label><div class="col-lg-8"><label id="user_city">' + city.name + '</label></div></div><div class="row"><label class="col-md-3">Nombre de usuario:</label>' +
                             '<div class="col-md-8"><label id="user_username">' + profile.username + '</label></div></div><div class="row"><label class="col-md-3"></label><div class="col-md-8">' +
-                            '<input type="button" class="btn btn-primary" onclick="location.href=\'./editprofile.php\'" value="Edit Profile"></div></div></div></div>';
+                            '<input type="button" class="btn btn-primary modify-button" id="modify_user" value="Edita el Perfil">'+
+                            '<input type="button" class="btn btn-primary save-button" id="save_user" value="Guardad los cambios"></div></div></div></div>';
 
                     $("#profile").append(profileEntity);
 
