@@ -26,7 +26,7 @@ session_start();
                         <div class="col-md-7 text-left">
                             <div class="display-t">
                                 <div class="display-tc animate-box" data-animate-effect="fadeInUp">
-                                    <h1 class="mb30">Our catalogue of courses</h1>
+                                    <h1 class="mb30">Nuestro catalogo</h1>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +37,8 @@ session_start();
                 <div class="container">
                     <div class="row row-pb-md">
                         <div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
-                            <span>We offer variaty of outdoor courses</span>
-                            <h2>List of courses</h2>
+                            <span>Ofrecemos distintas categorias de cursos indoor y outdoor</span>
+                            <h2>Lista de cursos</h2>
                             <p>Through our platform you will be able to search for the course that matches your lifestyle and skill level</p>
                         </div>
                     </div>

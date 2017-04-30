@@ -28,7 +28,7 @@ session_start();
                                 <div class="display-tc animate-box" data-animate-effect="fadeInUp">
                                     <h1 class="mb30">¿Listo para rendir al máximo?</h1>
                                     <p>
-                                        <a href="#fh5co-project"  class="btn btn-primary">Comineza</a>
+                                        <a href="#fh5co-project" id="regBtn" class="btn btn-primary">Comineza</a>
                                         <!--	 <em class="or">or</em> <a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Vea el Video</a>-->
                                     </p>
                                 </div>
